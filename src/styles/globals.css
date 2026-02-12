@@ -67,7 +67,7 @@
 	--popover-foreground: oklch(0.145 0 0);
 
 	/* Primary - Vibrant Purple */
-	--primary: oklch(0.5 0.2709 296.63);
+	--primary: oklch(0.4295 0.2322 296.63);
 	--primary-foreground: oklch(0.985 0 0);
 
 	/* Secondary */
@@ -88,7 +88,7 @@
 	/* Form & Border */
 	--border: oklch(0.922 0 0);
 	--input: oklch(0.922 0 0);
-	--ring: oklch(0.5 0.2709 296.63);
+	--ring: oklch(0.4295 0.2322 296.63);
 
 	/* Spacing */
 	--radius: 0.625rem;

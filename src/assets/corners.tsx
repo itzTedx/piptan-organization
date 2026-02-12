@@ -12,3 +12,18 @@ export const Corner = (props: SVGProps) => {
 		</svg>
 	);
 };
+
+export const Tape = (props: SVGProps) => {
+	return (
+		<svg
+			{...props}
+			fill="none"
+			height="14"
+			viewBox="0 0 14 14"
+			width="14"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M14 0H0V14L14 0Z" fill="currentColor" />
+		</svg>
+	);
+};
