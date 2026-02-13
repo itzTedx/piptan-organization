@@ -38,7 +38,10 @@ export function WhyChooseUs() {
 									</div>
 								))
 							: item.image && (
-									<div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-full">
+									<div
+										className="relative flex aspect-square items-center justify-center overflow-hidden rounded-full"
+										key={item.id}
+									>
 										<Logo className="relative z-20 scale-175 opacity-50" />
 										<div className="absolute inset-0 z-10 bg-primary/10 mix-blend-color" />
 										<Image

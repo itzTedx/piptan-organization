@@ -28,6 +28,7 @@ export const WHY_US = [
 		],
 	},
 	{
+		id: "middle",
 		image: "/images/group-business.webp",
 		alt: "Why Choose Us",
 	},
