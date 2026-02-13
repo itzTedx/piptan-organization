@@ -1,0 +1,93 @@
+import Link from "next/link";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+import { IconBuilding } from "@/assets/icon/buildings";
+import { IconChevronLeft, IconChevronRight } from "@/assets/icon/chevrons";
+
+import { ClientsCarousel } from "./components/clients-carousel";
+
+const GROWTHS = [
+	{
+		id: 1,
+		title: "Global Impact",
+		description: "Ever undertakes labor physic exercise except some advantage",
+		icon: IconBuilding,
+	},
+	{
+		id: 2,
+		title: "Corporate Sustainability",
+		description:
+			"Take a trivial example, which of ever laborious too obtain some.",
+		icon: IconBuilding,
+	},
+];
+
+export function Growth() {
+	return (
+		<section className="relative py-12 md:py-16">
+			<div className="container mx-auto max-w-7xl space-y-16">
+				<div className="grid grid-cols-3 gap-4 overflow-hidden rounded-2xl bg-gray-800 text-background outline outline-gray-400/20">
+					<div className="p-16">
+						<Badge>Our Growth</Badge>
+						<h3 className="mt-3 text-balance font-semibold text-4xl">
+							Thinking Beyond Ordinary Strategies
+						</h3>
+						<p className="my-6 text-lg text-muted/60">
+							The wise man therefore always holds in these matters to this
+							principle of selection.
+						</p>
+						<Button>Annual Report</Button>
+					</div>
+					<div className="p-16">
+						<div className="h-fit max-w-56 space-y-3 rounded-2xl rounded-br-none bg-gray-900 p-6">
+							<h4 className="font-semibold text-2xl">Monthly Growth</h4>
+							<div className="flex items-center justify-between">
+								<p>$48,560,25</p>
+								<p className="text-accent">+18%</p>
+							</div>
+						</div>
+					</div>
+					<div className="grid grid-rows-2 divide-y">
+						{GROWTHS.map(({ icon: Icon, ...growth }) => (
+							<div
+								className="flex flex-col justify-between bg-card p-6 text-foreground"
+								key={growth.id}
+							>
+								<div>
+									<h4 className="mb-3 font-semibold text-2xl">
+										{growth.title}
+									</h4>
+									<p className="text-lg text-muted-foreground">
+										{growth.description}
+									</p>
+								</div>
+								<div className="flex items-center justify-between">
+									<Icon className="size-10" />
+									<Button variant="link">
+										Read More <IconChevronLeft />
+									</Button>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+				<div>
+					<ClientsCarousel />
+					<p className="mt-6 flex w-full justify-center gap-3 text-center font-medium text-lg text-muted tracking-wide">
+						2.6k Companies & Individuals Trusted Us.{" "}
+						<Link
+							className="group inline-flex items-center gap-2 transition-colors hover:text-accent"
+							href="/"
+						>
+							<IconChevronRight className="size-3 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+							View All Clients
+						</Link>
+					</p>
+				</div>
+			</div>
+			<div className="absolute inset-0 -z-1 bg-linear-to-t from-80% from-gray-900 to-80%" />
+		</section>
+	);
+}
