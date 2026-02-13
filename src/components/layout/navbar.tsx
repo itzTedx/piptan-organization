@@ -23,7 +23,6 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "../ui/sheet";
-import { NavLinks } from "./nav-links";
 
 export function Navbar() {
 	const [open, setOpen] = React.useState(false);
@@ -173,7 +172,29 @@ export function Navbar() {
 
 			{/* Desktop nav bar */}
 			<nav className="sticky top-0 z-10 hidden border-b bg-card py-4 md:block">
-				<NavLinks />
+				<ul className="container mx-auto flex items-center gap-4">
+					{NAV_LINKS.map((link) => {
+						const isActive =
+							link.href === "/"
+								? pathname === "/"
+								: pathname.startsWith(link.href);
+
+						return (
+							<li key={link.href}>
+								<Link
+									className={`p-3 font-semibold transition-colors ${
+										isActive
+											? "text-primary"
+											: "text-muted-foreground hover:text-foreground"
+									}`}
+									href={link.href}
+								>
+									{link.label}
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
 			</nav>
 		</>
 	);
