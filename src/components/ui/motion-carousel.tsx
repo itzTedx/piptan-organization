@@ -120,7 +120,7 @@ function MotionCarousel(props: PropType) {
 									animate={{
 										scale: isActive ? 1 : 0.9,
 									}}
-									className="flex size-full select-none items-center justify-center text-3xl md:text-5xl"
+									className="flex size-full select-none items-center justify-center text-2xl sm:text-3xl md:text-5xl"
 									initial={false}
 									transition={transition}
 								>

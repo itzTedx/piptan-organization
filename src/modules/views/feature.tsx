@@ -10,42 +10,48 @@ import { IconYoutube } from "@/assets/icon/socials";
 
 export function Feature() {
 	return (
-		<section className="container mx-auto py-12 md:py-16">
-			<div className="mx-auto grid max-w-6xl grid-cols-2 gap-4">
-				<div className="relative flex gap-6 rounded-tl-3xl bg-primary p-9 text-primary-foreground">
-					<div className="flex size-18 items-center justify-center gap-4 rounded-full rounded-br-none bg-card">
-						<IconBuilding className="size-8 text-primary" />
+		<section className="container mx-auto py-10 sm:py-12 md:py-16">
+			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
+				<div className="relative flex gap-4 rounded-tl-2xl bg-primary p-4 text-primary-foreground sm:gap-6 sm:p-6 md:rounded-tl-3xl md:p-9">
+					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-card sm:size-16 md:size-18">
+						<IconBuilding className="size-6 text-primary sm:size-8" />
 					</div>
-					<div>
-						<div className="mb-6 size-2.5 bg-card" />
-						<h3 className="font-semibold text-4xl">840 Billion</h3>
-						<p className="mt-2 text-card/80">Client assets under advisement.</p>
+					<div className="min-w-0">
+						<div className="mb-4 size-2.5 bg-card sm:mb-6" />
+						<h3 className="font-semibold text-2xl sm:text-3xl md:text-4xl">
+							840 Billion
+						</h3>
+						<p className="mt-1 text-card/80 text-sm sm:mt-2 sm:text-base">
+							Client assets under advisement.
+						</p>
 					</div>
 					<IconArrowRightUp className="absolute right-0 bottom-0 h-full w-auto opacity-10" />
 				</div>
-				<div className="flex gap-6 bg-card p-9">
-					<div className="flex size-18 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-primary/10">
-						<IconMagnifierGrowth className="size-8 text-primary" />
+				<div className="flex gap-4 bg-card p-4 sm:gap-6 sm:p-6 md:p-9">
+					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-primary/10 sm:size-16 md:size-18">
+						<IconMagnifierGrowth className="size-6 text-primary sm:size-8" />
 					</div>
-					<div>
-						<h3 className="font-semibold text-4xl">Start Your Project</h3>
-						<p className="mt-2 text-foreground/60">
+					<div className="min-w-0">
+						<h3 className="font-semibold text-2xl sm:text-3xl md:text-4xl">
+							Start Your Project
+						</h3>
+						<p className="mt-1 text-foreground/60 text-sm sm:mt-2 sm:text-base">
 							The claims of duty obligations business frequently occur.
 						</p>
-						<Button variant="link">
+						<Button className="p-0 text-sm sm:text-base" variant="link">
 							Free Consultation <IconChevronRight />
 						</Button>
 					</div>
 				</div>
 			</div>
-			<div className="mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative -mt-34 aspect-video overflow-hidden rounded-xl">
+			<div className="mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative -mt-12 aspect-video overflow-hidden rounded-xl sm:-mt-20 md:-mt-34">
 				<Image
 					alt="Business"
 					className="object-cover"
 					fill
 					src="/images/business.webp"
 				/>
-				<IconYoutube className="absolute right-4 bottom-4 size-10 text-white" />
+				<IconYoutube className="absolute right-3 bottom-3 size-8 text-white sm:right-4 sm:bottom-4 sm:size-10" />
 			</div>
 		</section>
 	);

@@ -12,8 +12,8 @@ export default function Page() {
 	const SLIDE_COUNT = 6;
 	const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 	return (
-		<main>
-			<MotionCarousel hideButtons options={OPTIONS} slides={SLIDES} />; Piptan
+		<main className="min-w-0">
+			<MotionCarousel hideButtons options={OPTIONS} slides={SLIDES} />
 			<About />
 			<Feature />
 			<Services />
