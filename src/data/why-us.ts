@@ -28,6 +28,10 @@ export const WHY_US = [
 		],
 	},
 	{
+		image: "/images/group-business.webp",
+		alt: "Why Choose Us",
+	},
+	{
 		id: "right",
 		lists: [
 			{

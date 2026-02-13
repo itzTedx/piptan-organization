@@ -36,7 +36,7 @@ export function Navbar() {
 
 	return (
 		<>
-			<header className="relative">
+			<header className="relative bg-card">
 				<div className="container mx-auto flex items-center justify-between gap-2 border-b px-4 py-3 sm:gap-4 sm:py-4 md:px-6">
 					{/* Left: Logo + award block (desktop only) */}
 					<div className="flex min-w-0 flex-1 items-center gap-4 md:gap-6">
@@ -95,11 +95,7 @@ export function Navbar() {
 							<SheetTrigger
 								className="md:hidden"
 								render={
-									<Button
-										aria-label="Open menu"
-										size="icon"
-										variant="ghost"
-									/>
+									<Button aria-label="Open menu" size="icon" variant="ghost" />
 								}
 							>
 								<Menu className="size-6" />
@@ -176,7 +172,7 @@ export function Navbar() {
 			</header>
 
 			{/* Desktop nav bar */}
-			<nav className="sticky top-0 z-10 hidden border-b bg-background py-4 md:block">
+			<nav className="sticky top-0 z-10 hidden border-b bg-card py-4 md:block">
 				<NavLinks />
 			</nav>
 		</>
