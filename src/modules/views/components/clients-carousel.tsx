@@ -21,7 +21,10 @@ export const ClientsCarousel = ({ className }: Props) => {
 		<Carousel className={className} plugins={[Autoplay({ delay: 2000 })]}>
 			<CarouselContent>
 				{CLIENTS.map((client) => (
-					<CarouselItem className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6" key={client.id}>
+					<CarouselItem
+						className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
+						key={client.id}
+					>
 						<Image
 							alt={`Client ${client.id}`}
 							className="opacity-80"

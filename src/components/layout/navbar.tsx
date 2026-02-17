@@ -29,6 +29,7 @@ export function Navbar() {
 	const pathname = usePathname();
 
 	// Close sheet on route change (e.g. after clicking a link)
+	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to re-run onSelect when the API changes
 	React.useEffect(() => {
 		setOpen(false);
 	}, [pathname]);

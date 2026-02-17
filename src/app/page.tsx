@@ -5,6 +5,7 @@ import { MotionCarousel } from "@/components/ui/motion-carousel";
 import { About } from "@/modules/views/about";
 import { Blogs } from "@/modules/views/blogs";
 import { CaseStudies } from "@/modules/views/case-studies";
+import { Faqs } from "@/modules/views/faqs";
 import { Feature } from "@/modules/views/feature";
 import { Growth } from "@/modules/views/growth";
 import { HowWeWorks } from "@/modules/views/how-we-works";
@@ -28,6 +29,7 @@ export default function Page() {
 			<HowWeWorks />
 			<CaseStudies />
 			<Blogs />
+			<Faqs />
 		</main>
 	);
 }

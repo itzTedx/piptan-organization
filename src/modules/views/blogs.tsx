@@ -27,7 +27,7 @@ export function Blogs() {
 									<div className="size-1 rounded-full bg-muted-foreground" />
 									<p>by {blog.author}</p>
 								</div>
-								<div className="relative aspect-4/3">
+								<div className="relative aspect-4/3 overflow-hidden rounded-2xl">
 									<Image
 										alt={blog.title}
 										className="object-cover"

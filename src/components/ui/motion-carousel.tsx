@@ -60,11 +60,13 @@ const useEmblaControls = (
 		setNextDisabled(!api.canScrollNext());
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to re-run onSelect when the API changes
 	const onInit = React.useCallback((api: EmblaCarouselType) => {
 		setScrollSnaps(api.scrollSnapList());
 		updateSelectionState(api);
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to re-run onSelect when the API changes
 	const onSelect = React.useCallback((api: EmblaCarouselType) => {
 		updateSelectionState(api);
 	}, []);
