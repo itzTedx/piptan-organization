@@ -19,8 +19,8 @@ export function Blogs() {
 
 				<div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3">
 					{BLOGS.map((blog) => (
-						<Card key={blog.id}>
-							<CardContent className="space-y-3">
+						<Card className="py-6" key={blog.id}>
+							<CardContent className="space-y-3 px-6">
 								<Badge variant="secondary">{blog.category}</Badge>
 								<div className="flex items-center gap-2 text-muted-foreground">
 									<p>On {blog.createdAt}</p>
