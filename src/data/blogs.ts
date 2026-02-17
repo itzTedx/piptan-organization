@@ -5,7 +5,7 @@ export const BLOGS = [
 		category: "Business",
 		description:
 			"Financial planning is the process of creating a roadmap for your financial future. It involves setting goals, creating a budget, and making decisions about your money.",
-		image: "/images/blogs/blog-1.jpg",
+		image: "/images/blogs/blog-1.webp",
 		createdAt: "August 16, 2026",
 		author: "Shashi Piptan",
 	},
@@ -15,7 +15,7 @@ export const BLOGS = [
 		category: "Investment",
 		description:
 			"Financial planning is the process of creating a roadmap for your financial future. It involves setting goals, creating a budget, and making decisions about your money.",
-		image: "/images/blogs/blog-1.jpg",
+		image: "/images/blogs/blog-2.webp",
 		createdAt: "May 30, 2026",
 		author: "Shashi Piptan",
 	},
@@ -25,7 +25,7 @@ export const BLOGS = [
 		category: "Consulting",
 		description:
 			"Financial planning is the process of creating a roadmap for your financial future. It involves setting goals, creating a budget, and making decisions about your money.",
-		image: "/images/blogs/blog-1.jpg",
+		image: "/images/blogs/blog-3.webp",
 		createdAt: "May 30, 2026",
 		author: "Shashi Piptan",
 	},
