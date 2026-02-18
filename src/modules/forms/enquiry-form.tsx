@@ -53,7 +53,7 @@ export function EnquiryForm() {
 	});
 
 	return (
-		<Card className="w-full py-6">
+		<Card className="w-full py-6 shadow-md">
 			<CardContent className="px-6">
 				<form
 					id="bug-report-form"
@@ -69,7 +69,9 @@ export function EnquiryForm() {
 									field.state.meta.isTouched && !field.state.meta.isValid;
 								return (
 									<Field data-invalid={isInvalid}>
-										<FieldLabel htmlFor={field.name}>Name</FieldLabel>
+										<FieldLabel className="sr-only" htmlFor={field.name}>
+											Name
+										</FieldLabel>
 										<Input
 											aria-invalid={isInvalid}
 											autoComplete="off"
@@ -77,7 +79,7 @@ export function EnquiryForm() {
 											name={field.name}
 											onBlur={field.handleBlur}
 											onChange={(e) => field.handleChange(e.target.value)}
-											placeholder="John Doe"
+											placeholder="Name"
 											value={field.state.value}
 										/>
 										{isInvalid && (
@@ -94,7 +96,9 @@ export function EnquiryForm() {
 										field.state.meta.isTouched && !field.state.meta.isValid;
 									return (
 										<Field data-invalid={isInvalid}>
-											<FieldLabel htmlFor={field.name}>Email</FieldLabel>
+											<FieldLabel className="sr-only" htmlFor={field.name}>
+												Email
+											</FieldLabel>
 											<Input
 												aria-invalid={isInvalid}
 												autoComplete="off"
@@ -102,7 +106,7 @@ export function EnquiryForm() {
 												name={field.name}
 												onBlur={field.handleBlur}
 												onChange={(e) => field.handleChange(e.target.value)}
-												placeholder="john.doe@example.com"
+												placeholder="Email"
 												value={field.state.value}
 											/>
 											{isInvalid && (
@@ -118,7 +122,9 @@ export function EnquiryForm() {
 										field.state.meta.isTouched && !field.state.meta.isValid;
 									return (
 										<Field data-invalid={isInvalid}>
-											<FieldLabel htmlFor={field.name}>Phone</FieldLabel>
+											<FieldLabel className="sr-only" htmlFor={field.name}>
+												Phone
+											</FieldLabel>
 											<Input
 												aria-invalid={isInvalid}
 												autoComplete="off"
@@ -126,7 +132,7 @@ export function EnquiryForm() {
 												name={field.name}
 												onBlur={field.handleBlur}
 												onChange={(e) => field.handleChange(e.target.value)}
-												placeholder="+971 54 321 9876"
+												placeholder="Phone"
 												value={field.state.value}
 											/>
 											{isInvalid && (
@@ -143,7 +149,9 @@ export function EnquiryForm() {
 									field.state.meta.isTouched && !field.state.meta.isValid;
 								return (
 									<Field data-invalid={isInvalid}>
-										<FieldLabel htmlFor={field.name}>Subject</FieldLabel>
+										<FieldLabel className="sr-only" htmlFor={field.name}>
+											Subject
+										</FieldLabel>
 										<Input
 											aria-invalid={isInvalid}
 											autoComplete="off"
@@ -167,7 +175,9 @@ export function EnquiryForm() {
 									field.state.meta.isTouched && !field.state.meta.isValid;
 								return (
 									<Field data-invalid={isInvalid}>
-										<FieldLabel htmlFor={field.name}>Message</FieldLabel>
+										<FieldLabel className="sr-only" htmlFor={field.name}>
+											Message
+										</FieldLabel>
 										<InputGroup>
 											<InputGroupTextarea
 												aria-invalid={isInvalid}
@@ -175,7 +185,7 @@ export function EnquiryForm() {
 												name={field.name}
 												onBlur={field.handleBlur}
 												onChange={(e) => field.handleChange(e.target.value)}
-												placeholder="Message"
+												placeholder="Your message"
 												rows={6}
 												value={field.state.value}
 											/>
@@ -193,7 +203,12 @@ export function EnquiryForm() {
 			</CardContent>
 			<CardFooter className="px-6">
 				<Field orientation="horizontal">
-					<Button className="w-full" form="bug-report-form" type="submit">
+					<Button
+						className="w-full"
+						form="bug-report-form"
+						size="lg"
+						type="submit"
+					>
 						Send Request
 					</Button>
 				</Field>

@@ -34,7 +34,7 @@ export function Cta() {
 						</li>
 						<li>
 							<h3 className="font-medium">Email</h3>
-							<p className="mt-1 font-semibold text-muted">+971 54 321 9876</p>
+							<p className="mt-1 font-semibold text-muted">info@piptan.com</p>
 						</li>
 						<li>
 							<ul className="flex items-center gap-6">
@@ -53,12 +53,12 @@ export function Cta() {
 				</div>
 				<Image
 					alt="Growth"
-					className="absolute -right-24 bottom-0 z-20"
+					className="absolute -right-20 -bottom-12 z-20 translate-x-12"
 					height={1080}
 					src="/images/growth.svg"
 					width={720}
 				/>
-				<div className="absolute bottom-0 left-1/2 size-32 -translate-x-1/4 translate-y-8 rounded-full bg-primary sm:size-48 md:size-96 lg:size-156 lg:translate-y-12" />
+				<div className="absolute bottom-0 left-1/2 size-32 -translate-x-1/4 translate-y-8 rounded-full bg-primary sm:size-48 md:size-96 lg:size-178 lg:translate-y-12" />
 			</div>
 		</section>
 	);
