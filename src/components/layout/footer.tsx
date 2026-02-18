@@ -51,8 +51,11 @@ export function Footer() {
 							<p className="py-3 text-lg text-muted-foreground">
 								280 Granite Run Drive Suite Hobert, LA 90010, United States.
 							</p>
-							<Link className="flex items-center gap-3" href="/">
-								<div className="flex size-12 items-center justify-center rounded-full bg-primary/10">
+							<Link
+								className="group mt-4 flex items-center gap-3 transition-colors hover:text-primary"
+								href="/"
+							>
+								<div className="flex size-12 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
 									<IconMap className="size-6 text-primary" />
 								</div>
 								<span className="font-medium text-lg">Google Maps</span>

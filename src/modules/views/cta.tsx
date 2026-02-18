@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Badge } from "@/components/ui/badge";
 
 import { IconFacebook, IconLinkedin, IconX } from "@/assets/icon/socials";
@@ -16,7 +18,7 @@ export function Cta() {
 					</h2>
 					<EnquiryForm />
 				</div>
-				<div className="relative z-10 min-w-0">
+				<div className="relative z-30 min-w-0">
 					<IconSupport />
 					<ul className="mt-12 space-y-9 text-sm sm:text-base">
 						<li>
@@ -49,6 +51,13 @@ export function Cta() {
 						</li>
 					</ul>
 				</div>
+				<Image
+					alt="Growth"
+					className="absolute -right-24 bottom-0 z-20"
+					height={1080}
+					src="/images/growth.svg"
+					width={720}
+				/>
 				<div className="absolute bottom-0 left-1/2 size-32 -translate-x-1/4 translate-y-8 rounded-full bg-primary sm:size-48 md:size-96 lg:size-156 lg:translate-y-12" />
 			</div>
 		</section>

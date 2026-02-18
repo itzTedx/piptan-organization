@@ -30,7 +30,7 @@ export const NAV_LINKS: NavLink[] = [
 	{
 		id: 5,
 		label: "Our Team",
-		href: "/",
+		href: "/company/team",
 	},
 	{
 		id: 6,
