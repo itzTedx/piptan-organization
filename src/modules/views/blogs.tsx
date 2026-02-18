@@ -10,7 +10,7 @@ import { BLOGS } from "@/data/resources";
 
 export function Blogs() {
 	return (
-		<section className="py-10 sm:py-12 md:py-16 lg:py-28">
+		<section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
 			<div className="container mx-auto flex max-w-7xl flex-col items-center gap-4">
 				<Badge>Blogs</Badge>
 				<h2 className="text-center font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">

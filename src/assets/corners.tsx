@@ -54,3 +54,22 @@ export const BGCorners = (props: SVGProps) => {
 		</svg>
 	);
 };
+
+export const CornerRight = (props: SVGProps) => {
+	return (
+		<svg
+			{...props}
+			aria-hidden="true"
+			fill="none"
+			height="311"
+			viewBox="0 0 311 311"
+			width="311"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M0.5 0.500977C171.095 0.77062 309.336 139.012 309.605 309.607H0.5V0.500977Z"
+				stroke="currentColor"
+			/>
+		</svg>
+	);
+};
