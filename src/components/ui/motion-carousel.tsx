@@ -2,15 +2,23 @@
 
 import * as React from "react";
 
+import Image from "next/image";
+
 import { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, type Transition } from "motion/react";
 
+import { IconBuilding } from "@/assets/icon/buildings";
+
 import { Button } from "./button";
 
 type PropType = {
-	slides: number[];
+	slides: {
+		image: string;
+		title: string;
+		description: string;
+	}[];
 	options?: EmblaOptionsType;
 	hideButtons?: boolean;
 };
@@ -110,23 +118,49 @@ function MotionCarousel(props: PropType) {
 		<div className="w-full space-y-4 [--slide-height:9rem] [--slide-size:100%] [--slide-spacing:1.5rem] sm:[--slide-height:3rem] md:[--slide-height:calc(100svh-8.75rem)]">
 			<div className="overflow-hidden" ref={emblaRef}>
 				<div className="flex touch-pan-y touch-pinch-zoom">
-					{slides.map((index) => {
+					{slides.map((slide, index) => {
 						const isActive = index === selectedIndex;
 
 						return (
 							<motion.div
 								className="mr-(--slide-spacing) flex h-(--slide-height) min-w-0 flex-none basis-(--slide-size)"
-								key={index}
+								key={slide.title}
 							>
 								<motion.div
 									animate={{
-										scale: isActive ? 1 : 0.9,
+										scale: isActive ? 1.1 : 1,
 									}}
-									className="flex size-full select-none items-center justify-center text-2xl sm:text-3xl md:text-5xl"
+									className="relative flex size-full select-none overflow-hidden rounded-xl"
 									initial={false}
 									transition={transition}
 								>
-									{index + 1}
+									<div className="container relative z-10 mx-auto flex max-w-7xl flex-col justify-center space-y-4">
+										<div className="max-w-xl text-balance text-card">
+											<h1 className="font-bold text-4xl md:text-6xl lg:text-8xl">
+												{slide.title}
+											</h1>
+											<div className="mt-4 flex gap-6">
+												<div className="flex size-14 shrink-0 items-center justify-center rounded-full rounded-br-none bg-accent/50 backdrop-blur-lg">
+													<IconBuilding className="size-7" />
+												</div>
+												<div className="space-y-3">
+													<p className="text-balance text-muted/80 text-xl leading-relaxed">
+														{slide.description}
+													</p>
+													<Button className="w-fit" size="lg">
+														Services & Plan
+													</Button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="absolute top-0 right-0 bottom-0 left-0 z-1 bg-black/50" />
+									<Image
+										alt={slide.title}
+										className="object-cover"
+										fill
+										src={slide.image}
+									/>
 								</motion.div>
 							</motion.div>
 						);
