@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tape } from "@/assets/corners";
 import { IconBuilding } from "@/assets/icon/buildings";
 import { IconChevronLeft, IconChevronRight } from "@/assets/icon/chevrons";
+
 import { cn } from "@/lib/utils";
 
 import { ClientsCarousel } from "./components/clients-carousel";
@@ -75,7 +76,9 @@ export function Growth() {
 							<div
 								className={cn(
 									"flex flex-col justify-between overflow-hidden bg-card p-4 text-foreground sm:p-6 md:rounded-r-3xl md:rounded-br-none",
-									i === 0 ? "rounded-t-xl rounded-b-none md:rounded-tr-3xl" : "rounded-t-none rounded-b-xl"
+									i === 0
+										? "rounded-t-xl rounded-b-none md:rounded-tr-3xl"
+										: "rounded-t-none rounded-b-xl"
 								)}
 								key={growth.id}
 							>

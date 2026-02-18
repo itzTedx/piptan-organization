@@ -21,7 +21,9 @@ export function Blogs() {
 					{BLOGS.map((blog) => (
 						<Card className="py-4 sm:py-6" key={blog.id}>
 							<CardContent className="space-y-3 px-4 sm:px-6">
-								<Badge variant="secondary" className="text-xs sm:text-sm">{blog.category}</Badge>
+								<Badge className="text-xs sm:text-sm" variant="secondary">
+									{blog.category}
+								</Badge>
 								<div className="flex flex-wrap items-center gap-2 text-muted-foreground text-xs sm:text-sm">
 									<p>On {blog.createdAt}</p>
 									<div className="size-1 rounded-full bg-muted-foreground" />
@@ -39,7 +41,7 @@ export function Blogs() {
 								<CardTitle className="font-medium text-lg sm:text-xl md:text-2xl">
 									{blog.title}
 								</CardTitle>
-								<Button variant="ghost" className="text-sm sm:text-base">
+								<Button className="text-sm sm:text-base" variant="ghost">
 									Explore more <IconChevronRight />
 								</Button>
 							</CardContent>

@@ -35,8 +35,12 @@ export function CaseStudies() {
 								<div className="group p-1">
 									<div className="relative flex aspect-4/5 items-end overflow-hidden rounded-lg p-3 sm:rounded-xl sm:p-4">
 										<div className="relative z-10 translate-y-8 space-y-2 rounded-xl bg-card p-3 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 sm:translate-y-12 sm:space-y-3 sm:rounded-2xl sm:p-4">
-											<Badge className="text-xs sm:text-sm">{study.category}</Badge>
-											<h3 className="font-medium text-base sm:text-xl">{study.title}</h3>
+											<Badge className="text-xs sm:text-sm">
+												{study.category}
+											</Badge>
+											<h3 className="font-medium text-base sm:text-xl">
+												{study.title}
+											</h3>
 										</div>
 										<Image
 											alt={study.title}

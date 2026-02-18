@@ -22,23 +22,31 @@ export function WhyChooseUs() {
 			</h2>
 			<div className="mt-6 grid w-full grid-cols-1 gap-6 md:mt-9 md:grid-cols-3 md:gap-0 md:space-y-0 lg:items-center">
 				{WHY_US.map((item) => (
-					<div className={cn("space-y-4 md:space-y-9", item.lists && "md:space-y-9")} key={item.id}>
+					<div
+						className={cn(
+							"space-y-4 md:space-y-9",
+							item.lists && "md:space-y-9"
+						)}
+						key={item.id}
+					>
 						{item.lists
 							? item.lists.map(({ icon: Icon, ...list }) => (
 									<div
 										className={cn(
 											"relative z-10 w-full rounded-2xl rounded-br-none border bg-card p-5 sm:max-w-sm sm:p-6 md:max-w-sm md:p-8 lg:mx-auto",
 											item.id === "left"
-												? "md:odd:translate-x-4 md:even:-translate-x-3 lg:odd:translate-x-9 lg:even:-translate-x-6"
-												: "md:odd:-translate-x-3 md:even:translate-x-4 lg:odd:-translate-x-4 lg:even:translate-x-9"
+												? "md:even:-translate-x-3 md:odd:translate-x-4 lg:even:-translate-x-6 lg:odd:translate-x-9"
+												: "md:even:translate-x-4 md:odd:-translate-x-3 lg:even:translate-x-9 lg:odd:-translate-x-4"
 										)}
 										key={list.id}
 									>
 										<div className="absolute -top-4 -right-6 flex h-16 w-12 items-center justify-center rounded-tr-2xl rounded-bl-2xl bg-primary before:absolute before:top-0 before:right-full before:size-4 before:rounded-tl-2xl before:bg-primary-dark sm:h-18 sm:w-14 sm:rounded-tr-3xl sm:rounded-bl-3xl lg:before:rounded-tl-3xl">
 											<Icon className="size-5 text-primary-foreground sm:size-6" />
 										</div>
-										<h3 className="mb-2 font-semibold text-lg sm:mb-3 sm:text-xl">{list.title}</h3>
-										<p className="line-clamp-2 text-sm text-muted-foreground sm:text-base">
+										<h3 className="mb-2 font-semibold text-lg sm:mb-3 sm:text-xl">
+											{list.title}
+										</h3>
+										<p className="line-clamp-2 text-muted-foreground text-sm sm:text-base">
 											{list.description}
 										</p>
 									</div>

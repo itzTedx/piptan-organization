@@ -126,7 +126,7 @@ export function EnquiryForm() {
 												name={field.name}
 												onBlur={field.handleBlur}
 												onChange={(e) => field.handleChange(e.target.value)}
-												placeholder="+49 123 456 7890"
+												placeholder="+971 54 321 9876"
 												value={field.state.value}
 											/>
 											{isInvalid && (
@@ -171,7 +171,6 @@ export function EnquiryForm() {
 										<InputGroup>
 											<InputGroupTextarea
 												aria-invalid={isInvalid}
-												className="min-h-24 resize-none"
 												id={field.name}
 												name={field.name}
 												onBlur={field.handleBlur}

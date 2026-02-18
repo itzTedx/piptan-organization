@@ -25,8 +25,11 @@ export function HowWeWorks() {
 
 				<ul className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-6">
 					{HOW_WE_WORKS.map((item) => (
-						<li className="group relative z-10 p-4 sm:p-6 md:odd:mt-0 lg:odd:mt-12" key={item.id}>
-							<div className="relative aspect-square w-full max-w-[13rem] sm:size-44 md:size-52">
+						<li
+							className="group relative z-10 p-4 sm:p-6 md:odd:mt-0 lg:odd:mt-12"
+							key={item.id}
+						>
+							<div className="relative aspect-square w-full max-w-52 sm:size-44 md:size-52">
 								<Image
 									alt={item.title}
 									className="z-10 rounded-2xl rounded-br-none object-cover shadow-xl sm:rounded-3xl md:rounded-4xl"
@@ -35,7 +38,9 @@ export function HowWeWorks() {
 								/>
 								<div className="absolute inset-0 -z-1 rotate-12 rounded-2xl rounded-br-none border border-primary/50 bg-primary/5 sm:rounded-3xl md:rounded-4xl" />
 							</div>
-							<h3 className="mt-6 font-semibold text-xl sm:mt-9 sm:text-2xl">{item.title}</h3>
+							<h3 className="mt-6 font-semibold text-xl sm:mt-9 sm:text-2xl">
+								{item.title}
+							</h3>
 							<p className="mt-2 text-base text-muted-foreground sm:mt-3 sm:text-lg">
 								{item.description}
 							</p>
@@ -44,7 +49,9 @@ export function HowWeWorks() {
 								<p className="translate-y-6 font-semibold text-4xl text-primary-dark/10 transition-all ease-out group-hover:translate-y-0 group-hover:text-primary sm:text-5xl md:text-6xl">
 									{item.id}
 								</p>
-								<p className="inline text-primary text-base sm:text-xl">st step</p>
+								<p className="inline text-base text-primary sm:text-xl">
+									st step
+								</p>
 							</div>
 						</li>
 					))}

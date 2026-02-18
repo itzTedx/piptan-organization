@@ -147,7 +147,10 @@ function MotionCarousel(props: PropType) {
 													<p className="text-balance text-muted/80 text-sm leading-relaxed sm:text-base md:text-xl">
 														{slide.description}
 													</p>
-													<Button className="w-fit text-sm sm:text-base" size="lg">
+													<Button
+														className="w-fit text-sm sm:text-base"
+														size="lg"
+													>
 														Services & Plan
 													</Button>
 												</div>
