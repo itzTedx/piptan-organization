@@ -87,7 +87,7 @@ export function EnquiryForm() {
 								);
 							}}
 						</form.Field>
-						<FieldGroup>
+						<FieldGroup className="grid gap-5 md:grid-cols-2">
 							<form.Field name="email">
 								{(field) => {
 									const isInvalid =

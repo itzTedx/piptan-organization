@@ -128,7 +128,7 @@ export function Navbar() {
 														: "text-muted-foreground hover:bg-muted hover:text-foreground"
 												}`}
 												href={link.href}
-												key={link.href}
+												key={link.id}
 												onClick={() => setOpen(false)}
 											>
 												{link.label}
@@ -172,7 +172,7 @@ export function Navbar() {
 			</header>
 
 			{/* Desktop nav bar */}
-			<nav className="sticky top-0 z-10 hidden border-b bg-card py-4 md:block">
+			<nav className="sticky top-0 z-9999 hidden border-b bg-card py-4 md:block">
 				<ul className="container mx-auto flex items-center gap-4">
 					{NAV_LINKS.map((link) => {
 						const isActive =
@@ -181,7 +181,7 @@ export function Navbar() {
 								: pathname.startsWith(link.href);
 
 						return (
-							<li key={link.href}>
+							<li key={link.id}>
 								<Link
 									className={`p-3 font-semibold transition-colors ${
 										isActive
