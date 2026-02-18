@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tape } from "@/assets/corners";
 import { IconBuilding } from "@/assets/icon/buildings";
 import { IconChevronLeft, IconChevronRight } from "@/assets/icon/chevrons";
+import { cn } from "@/lib/utils";
 
 import { ClientsCarousel } from "./components/clients-carousel";
 
@@ -63,16 +64,19 @@ export function Growth() {
 						</div>
 						<Image
 							alt="Happy Man"
-							className="absolute bottom-0 left-0 translate-x-0 object-contain object-left-bottom md:translate-x-4 md:object-cover"
+							className="absolute bottom-0 left-0 translate-x-0 object-contain object-bottom-left md:translate-x-4 md:object-cover"
 							height={920}
 							src="/images/happy-man.webp"
 							width={780}
 						/>
 					</div>
 					<div className="relative z-10 -mr-px grid grid-cols-1 grid-rows-2 divide-y divide-border md:grid-cols-1">
-						{GROWTHS.map(({ icon: Icon, ...growth }) => (
+						{GROWTHS.map(({ icon: Icon, ...growth }, i) => (
 							<div
-								className="flex flex-col justify-between overflow-hidden rounded-b-xl rounded-t-none bg-card p-4 text-foreground sm:p-6 md:rounded-r-3xl md:rounded-br-none md:rounded-t-xl"
+								className={cn(
+									"flex flex-col justify-between overflow-hidden bg-card p-4 text-foreground sm:p-6 md:rounded-r-3xl md:rounded-br-none",
+									i === 0 ? "rounded-t-xl rounded-b-none md:rounded-tr-3xl" : "rounded-t-none rounded-b-xl"
+								)}
 								key={growth.id}
 							>
 								<div>

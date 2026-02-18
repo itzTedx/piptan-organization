@@ -15,7 +15,7 @@ export function Faqs() {
     return (
         <section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
             <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:gap-6 sm:px-6 md:grid-cols-[.9fr_1fr] md:gap-9 lg:gap-12 xl:gap-16">
-                <div className="relative aspect-[6/8] max-h-[320px] w-full max-w-sm overflow-hidden rounded-2xl rounded-br-none justify-self-center md:max-h-none md:max-w-none md:aspect-6/8 md:rounded-full">
+                <div className="relative aspect-6/8 max-h-[320px] w-full max-w-sm justify-self-center overflow-hidden rounded-2xl rounded-br-none md:max-h-none md:max-w-none md:rounded-full">
                     <Image
                         alt="FAQs"
                         className="object-cover"
