@@ -8,7 +8,7 @@ import CircularText from "./components/circular-text";
 
 export function About() {
 	return (
-		<section className="container mx-auto grid max-w-6xl grid-cols-1 gap-8 px-0 py-10 sm:gap-10 sm:py-12 md:grid-cols-2 md:gap-12 md:py-16 lg:gap-20 lg:py-24 xl:py-32">
+		<section className="container mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-10 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-2 md:gap-12 md:py-16 lg:gap-20 lg:py-24 xl:py-32">
 			<div className="relative flex aspect-square max-w-sm items-center justify-center justify-self-center rounded-full bg-muted sm:max-w-none">
 				<CircularText
 					className="absolute size-[115%] text-foreground uppercase"

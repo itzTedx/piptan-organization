@@ -18,10 +18,10 @@ import { CASE_STUDIES } from "@/data/resources";
 export function CaseStudies() {
 	return (
 		<section className="relative py-10 sm:py-12 md:py-16 lg:py-24 xl:py-32">
-			<div className="container relative z-10 mx-auto max-w-6xl">
+			<div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
 				<div className="mb-6">
 					<Badge>Case Studies</Badge>
-					<h2 className="mt-3 font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
+					<h2 className="mt-3 font-semibold text-2xl leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
 						Thinking Forward for your Results
 					</h2>
 				</div>
@@ -33,10 +33,10 @@ export function CaseStudies() {
 								key={study.id}
 							>
 								<div className="group p-1">
-									<div className="relative flex aspect-4/5 items-end overflow-hidden rounded-xl p-4">
-										<div className="relative z-10 translate-y-12 space-y-3 rounded-2xl bg-card p-4 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-											<Badge>{study.category}</Badge>
-											<h3 className="font-medium text-xl">{study.title}</h3>
+									<div className="relative flex aspect-4/5 items-end overflow-hidden rounded-lg p-3 sm:rounded-xl sm:p-4">
+										<div className="relative z-10 translate-y-8 space-y-2 rounded-xl bg-card p-3 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 sm:translate-y-12 sm:space-y-3 sm:rounded-2xl sm:p-4">
+											<Badge className="text-xs sm:text-sm">{study.category}</Badge>
+											<h3 className="font-medium text-base sm:text-xl">{study.title}</h3>
 										</div>
 										<Image
 											alt={study.title}
@@ -56,7 +56,7 @@ export function CaseStudies() {
 					<CarouselNext />
 					<CarouselPrevious />
 				</Carousel>
-				<CornerRight className="absolute -bottom-32 -left-12 z-10 -scale-y-100 text-muted-foreground/20" />
+				<CornerRight className="absolute -bottom-20 -left-4 z-10 hidden -scale-y-100 text-muted-foreground/20 sm:-bottom-32 sm:-left-8 md:block lg:-left-12" />
 			</div>
 			<div className="absolute inset-0 bg-linear-to-t from-50% from-card to-50%" />
 		</section>

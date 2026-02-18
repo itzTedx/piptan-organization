@@ -10,10 +10,10 @@ import { IconYoutube } from "@/assets/icon/socials";
 
 export function Feature() {
 	return (
-		<section className="container mx-auto py-10 sm:py-12 md:py-16">
+		<section className="container mx-auto px-4 py-10 sm:px-6 sm:py-12 md:py-16">
 			<div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
 				<div className="relative flex gap-4 rounded-tl-2xl bg-primary p-4 text-primary-foreground sm:gap-6 sm:p-6 md:rounded-tl-3xl md:p-9">
-					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-card sm:size-16 md:size-18">
+					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-card sm:size-16 md:size-[4.5rem]">
 						<IconBuilding className="size-6 text-primary sm:size-8" />
 					</div>
 					<div className="min-w-0">
@@ -28,7 +28,7 @@ export function Feature() {
 					<IconArrowRightUp className="absolute right-0 bottom-0 h-full w-auto opacity-10" />
 				</div>
 				<div className="flex gap-4 bg-card p-4 sm:gap-6 sm:p-6 md:p-9">
-					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-primary/10 sm:size-16 md:size-18">
+					<div className="flex size-14 shrink-0 items-center justify-center gap-4 rounded-full rounded-br-none bg-primary/10 sm:size-16 md:size-[4.5rem]">
 						<IconMagnifierGrowth className="size-6 text-primary sm:size-8" />
 					</div>
 					<div className="min-w-0">
@@ -44,7 +44,7 @@ export function Feature() {
 					</div>
 				</div>
 			</div>
-			<div className="mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative -mt-12 aspect-video overflow-hidden rounded-xl sm:-mt-20 md:-mt-34">
+			<div className="mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative -mt-8 aspect-video overflow-hidden rounded-xl sm:-mt-12 sm:rounded-2xl md:-mt-20 lg:-mt-[8.5rem]">
 				<Image
 					alt="Business"
 					className="object-cover"

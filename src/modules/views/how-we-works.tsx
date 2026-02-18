@@ -12,45 +12,45 @@ import { HOW_WE_WORKS } from "@/data/how-we-works";
 export function HowWeWorks() {
 	return (
 		<section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
-			<div className="container mx-auto flex max-w-6xl flex-col items-center gap-4">
+			<div className="container mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:px-6">
 				<Badge>
 					<div>
 						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
 					</div>
 					How we works?
 				</Badge>
-				<h2 className="text-center font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
+				<h2 className="text-center font-semibold text-2xl leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
 					We Plan for your Growth
 				</h2>
 
-				<ul className="relative grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<ul className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-6">
 					{HOW_WE_WORKS.map((item) => (
-						<li className="group relative z-10 p-6 odd:mt-12" key={item.id}>
-							<div className="relative aspect-square size-52">
+						<li className="group relative z-10 p-4 sm:p-6 md:odd:mt-0 lg:odd:mt-12" key={item.id}>
+							<div className="relative aspect-square w-full max-w-[13rem] sm:size-44 md:size-52">
 								<Image
 									alt={item.title}
-									className="z-10 rounded-4xl rounded-br-none object-cover shadow-xl"
+									className="z-10 rounded-2xl rounded-br-none object-cover shadow-xl sm:rounded-3xl md:rounded-4xl"
 									fill
 									src={item.image}
 								/>
-								<div className="absolute inset-0 -z-1 rotate-12 rounded-4xl rounded-br-none border border-primary/50 bg-primary/5" />
+								<div className="absolute inset-0 -z-1 rotate-12 rounded-2xl rounded-br-none border border-primary/50 bg-primary/5 sm:rounded-3xl md:rounded-4xl" />
 							</div>
-							<h3 className="mt-9 font-semibold text-2xl">{item.title}</h3>
-							<p className="mt-3 text-lg text-muted-foreground">
+							<h3 className="mt-6 font-semibold text-xl sm:mt-9 sm:text-2xl">{item.title}</h3>
+							<p className="mt-2 text-base text-muted-foreground sm:mt-3 sm:text-lg">
 								{item.description}
 							</p>
 
-							<div className="mt-9 flex h-14 w-full items-end gap-2 overflow-hidden border-b">
-								<p className="translate-y-6 font-semibold text-6xl text-primary-dark/10 transition-all ease-out group-hover:translate-y-0 group-hover:text-primary">
+							<div className="mt-6 flex h-12 w-full items-end gap-2 overflow-hidden border-b sm:mt-9 sm:h-14">
+								<p className="translate-y-6 font-semibold text-4xl text-primary-dark/10 transition-all ease-out group-hover:translate-y-0 group-hover:text-primary sm:text-5xl md:text-6xl">
 									{item.id}
 								</p>
-								<p className="inline text-primary text-xl">st step</p>
+								<p className="inline text-primary text-base sm:text-xl">st step</p>
 							</div>
 						</li>
 					))}
-					<Path className="-translate-1/2 absolute top-1/3 left-1/2 text-muted-foreground/30" />
+					<Path className="-translate-1/2 absolute top-1/3 left-1/2 hidden text-muted-foreground/30 md:block" />
 				</ul>
-				<p className="mt-4 flex w-full flex-wrap justify-center gap-2 px-2 text-center font-medium text-sm tracking-wide sm:mt-6 sm:gap-3 sm:text-lg">
+				<p className="mt-4 flex w-full flex-wrap justify-center gap-2 px-2 text-center font-medium text-xs tracking-wide sm:mt-6 sm:gap-3 sm:text-base md:text-lg">
 					Start Investing with Smart Ideas{" "}
 					<Link
 						className="group inline-flex items-center gap-2 transition-colors hover:text-accent"

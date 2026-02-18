@@ -13,9 +13,9 @@ import { FAQS } from "@/data/faqs";
 
 export function Faqs() {
     return (
-        <section className="bg-card py-10 sm:py-12md:py-16 lg:py-28">
-            <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:gap-6 md:grid-cols-[.9fr_1fr] md:gap-9 lg:gap-12 xl:gap-16">
-                <div className="relative aspect-6/8 overflow-hidden rounded-full rounded-br-none">
+        <section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
+            <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:gap-6 sm:px-6 md:grid-cols-[.9fr_1fr] md:gap-9 lg:gap-12 xl:gap-16">
+                <div className="relative aspect-[6/8] max-h-[320px] w-full max-w-sm overflow-hidden rounded-2xl rounded-br-none justify-self-center md:max-h-none md:max-w-none md:aspect-6/8 md:rounded-full">
                     <Image
                         alt="FAQs"
                         className="object-cover"
@@ -23,28 +23,28 @@ export function Faqs() {
                         src="/images/faq.webp"
                     />
 
-                    <Button className="absolute right-6 bottom-6" variant="secondary">
+                    <Button className="absolute right-3 bottom-3 text-xs sm:right-6 sm:bottom-6 sm:text-sm" variant="secondary">
                         Read More Q&A
                     </Button>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex min-w-0 flex-col gap-4">
                     <Badge>FAQs</Badge>
-                    <h2 className="font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
+                    <h2 className="font-semibold text-2xl leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
                         Get the Answers to Common Questions
                     </h2>
 
-                    <div className="rounded-2xl bg-linear-to-b from-primary/10 to-primary/5 p-3">
-                        <Accordion className="space-y-4" defaultValue={["01"]}>
+                    <div className="rounded-xl bg-linear-to-b from-primary/10 to-primary/5 p-2 sm:rounded-2xl sm:p-3">
+                        <Accordion className="space-y-3 sm:space-y-4" defaultValue={["01"]}>
                             {FAQS.map((faq) => (
                                 <AccordionItem
-                                    className="overflow-hidden rounded-xl bg-card"
+                                    className="overflow-hidden rounded-lg bg-card sm:rounded-xl"
                                     key={faq.id}
                                     value={faq.id}
                                 >
-                                    <AccordionTrigger className="p-5 aria-expanded:border-b-border">
+                                    <AccordionTrigger className="p-3 text-left text-sm aria-expanded:border-b-border sm:p-5 sm:text-base">
                                         {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="p-5">
+                                    <AccordionContent className="p-3 text-sm sm:p-5 sm:text-base">
                                         {faq.content}
                                     </AccordionContent>
                                 </AccordionItem>

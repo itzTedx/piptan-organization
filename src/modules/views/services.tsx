@@ -15,7 +15,7 @@ import { SERVICES } from "@/data/services";
 
 export function Services() {
 	return (
-		<section className="container mx-auto max-w-7xl px-0 py-10 sm:py-12 md:py-16">
+		<section className="container mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 md:py-16">
 			<div className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-10 md:mb-12 md:gap-4">
 				<Badge>
 					<div>
