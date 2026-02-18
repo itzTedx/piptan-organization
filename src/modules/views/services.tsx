@@ -8,6 +8,7 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import { Tape } from "@/assets/corners";
 import { IconChevronRight } from "@/assets/icon/chevrons";
 
 import { SERVICES } from "@/data/services";
@@ -16,7 +17,12 @@ export function Services() {
 	return (
 		<section className="container mx-auto max-w-7xl px-0 py-10 sm:py-12 md:py-16">
 			<div className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-10 md:mb-12 md:gap-4">
-				<Badge>Our Services</Badge>
+				<Badge>
+					<div>
+						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
+					</div>
+					Our Services
+				</Badge>
 				<h2 className="font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
 					Phenomenal Consulting Solutions
 				</h2>
@@ -40,7 +46,7 @@ export function Services() {
 									<Button className="text-sm sm:text-base" variant="secondary">
 										Explore More <IconChevronRight />
 									</Button>
-									<p className="text-muted-foreground text-sm sm:text-base">
+									<p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
 										{service.description}
 									</p>
 								</div>

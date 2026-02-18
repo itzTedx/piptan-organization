@@ -6,7 +6,7 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 import { IconChevronRight } from "@/assets/icon/chevrons";
 
-import { BLOGS } from "@/data/blogs";
+import { BLOGS } from "@/data/resources";
 
 export function Blogs() {
 	return (

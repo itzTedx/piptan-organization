@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import { Tape } from "@/assets/corners";
 import { IconBuilding } from "@/assets/icon/buildings";
 import { IconChevronLeft, IconChevronRight } from "@/assets/icon/chevrons";
 
@@ -28,11 +30,17 @@ export function Growth() {
 	return (
 		<section className="relative py-10 sm:py-12 md:py-16">
 			<div className="container mx-auto max-w-7xl space-y-10 sm:space-y-12 md:space-y-16">
-				<div className="grid grid-cols-1 gap-0 overflow-hidden rounded-xl bg-gray-800 text-background outline outline-gray-400/20 sm:rounded-2xl md:grid-cols-2 lg:grid-cols-3">
-					<div className="p-6 sm:p-10 md:p-16">
-						<Badge>Our Growth</Badge>
-						<h3 className="mt-3 text-balance font-semibold text-2xl sm:text-3xl md:text-4xl">
-							Thinking Beyond Ordinary Strategies
+				<div className="grid grid-cols-1 gap-0 rounded-xl bg-gray-800 text-background sm:rounded-4xl md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr]">
+					<div className="p-6 sm:p-10 md:p-12">
+						<Badge className="relative text-accent">
+							<div>
+								<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted/10" />
+							</div>
+							Our Growth
+						</Badge>
+						<h3 className="mt-3 text-balance font-semibold text-2xl leading-snug sm:text-3xl md:text-4xl lg:text-5xl">
+							Thinking <br />
+							Beyond Ordinary Strategies
 						</h3>
 						<p className="my-4 text-base text-muted/60 sm:my-6 sm:text-lg">
 							The wise man therefore always holds in these matters to this
@@ -40,25 +48,35 @@ export function Growth() {
 						</p>
 						<Button>Annual Report</Button>
 					</div>
-					<div className="p-6 sm:p-10 md:p-16">
-						<div className="h-fit max-w-56 space-y-3 rounded-xl rounded-br-none bg-gray-900 p-4 sm:rounded-2xl sm:p-6">
+					<div className="relative flex items-end justify-end p-6 sm:p-10">
+						<div className="relative z-10 h-fit max-w-56 space-y-3 rounded-xl rounded-br-none bg-gray-900 p-4 sm:rounded-2xl sm:rounded-br-none sm:p-6">
 							<h4 className="font-semibold text-xl sm:text-2xl">
 								Monthly Growth
 							</h4>
 							<div className="flex items-center justify-between text-sm sm:text-base">
 								<p>$48,560,25</p>
-								<p className="text-accent">+18%</p>
+								<p className="font-semibold text-accent">+18%</p>
+							</div>
+							<div className="relative h-1.5 w-full rounded-full bg-muted-foreground/30">
+								<div className="absolute top-0 left-0 h-full w-1/2 rounded-full bg-accent" />
 							</div>
 						</div>
+						<Image
+							alt="Happy Man"
+							className="absolute bottom-0 left-0 translate-x-4"
+							height={920}
+							src="/images/happy-man.webp"
+							width={780}
+						/>
 					</div>
-					<div className="grid grid-rows-2 divide-y divide-border">
+					<div className="relative z-10 -mr-px grid grid-rows-2 divide-y divide-border">
 						{GROWTHS.map(({ icon: Icon, ...growth }) => (
 							<div
-								className="flex flex-col justify-between bg-card p-4 text-foreground sm:p-6"
+								className="flex flex-col justify-between overflow-hidden rounded-r-3xl rounded-br-none bg-card p-4 text-foreground sm:p-6"
 								key={growth.id}
 							>
 								<div>
-									<h4 className="mb-2 font-semibold text-xl sm:mb-3 sm:text-2xl">
+									<h4 className="mb-2 font-medium text-xl sm:mb-3 sm:text-2xl">
 										{growth.title}
 									</h4>
 									<p className="text-base text-muted-foreground sm:text-lg">
@@ -66,7 +84,7 @@ export function Growth() {
 									</p>
 								</div>
 								<div className="flex items-center justify-between">
-									<Icon className="size-8 sm:size-10" />
+									<Icon className="size-8 stroke-1 text-primary sm:size-10" />
 									<Button className="text-sm sm:text-base" variant="link">
 										Read More <IconChevronLeft />
 									</Button>

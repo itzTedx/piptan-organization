@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 
+import { Tape } from "@/assets/corners";
 import { IconChevronRight } from "@/assets/icon/chevrons";
 import { Path } from "@/assets/path";
 
@@ -12,7 +13,12 @@ export function HowWeWorks() {
 	return (
 		<section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
 			<div className="container mx-auto flex max-w-6xl flex-col items-center gap-4">
-				<Badge>How we works?</Badge>
+				<Badge>
+					<div>
+						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
+					</div>
+					How we works?
+				</Badge>
 				<h2 className="text-center font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
 					We Plan for your Growth
 				</h2>

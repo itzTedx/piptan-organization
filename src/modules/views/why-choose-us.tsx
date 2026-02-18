@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 
+import { Tape } from "@/assets/corners";
 import { Logo } from "@/assets/logo";
 
 import { WHY_US } from "@/data/why-us";
@@ -10,7 +11,12 @@ import { cn } from "@/lib/utils";
 export function WhyChooseUs() {
 	return (
 		<section className="container mx-auto flex max-w-7xl flex-col items-center gap-4 py-10 sm:py-12 md:py-16 lg:py-28">
-			<Badge>Why Choose Us?</Badge>
+			<Badge>
+				<div>
+					<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
+				</div>
+				Why Choose Us?
+			</Badge>
 			<h2 className="text-center font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
 				Reason for Choosing Piptan
 			</h2>

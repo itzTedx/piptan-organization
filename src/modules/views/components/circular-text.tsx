@@ -1,121 +1,26 @@
 "use client";
 
-import React, { useEffect } from "react";
-
-import {
-	MotionValue,
-	motion,
-	Transition,
-	useAnimation,
-	useMotionValue,
-} from "motion/react";
+import React from "react";
 
 import { cn } from "@/lib/utils";
 
 interface CircularTextProps {
 	text: string;
-	spinDuration?: number;
-	onHover?: "slowDown" | "speedUp" | "pause" | "goBonkers";
 	className?: string;
 }
 
-const getRotationTransition = (
-	duration: number,
-	from: number,
-	loop = true
-) => ({
-	from,
-	to: from + 360,
-	ease: "linear" as const,
-	duration,
-	type: "tween" as const,
-	repeat: loop ? Number.POSITIVE_INFINITY : 0,
-});
-
-const getTransition = (duration: number, from: number) => ({
-	rotate: getRotationTransition(duration, from),
-	scale: {
-		type: "spring" as const,
-		damping: 20,
-		stiffness: 300,
-	},
-});
-
 const CircularText: React.FC<CircularTextProps> = ({
 	text,
-	spinDuration = 20,
-	onHover = "speedUp",
 	className = "",
 }) => {
 	const letters = Array.from(text);
-	const controls = useAnimation();
-	const rotation: MotionValue<number> = useMotionValue(0);
-
-	useEffect(() => {
-		const start = rotation.get();
-		controls.start({
-			rotate: start + 360,
-			scale: 1,
-			transition: getTransition(spinDuration, start),
-		});
-	}, [spinDuration, text, onHover, controls]);
-
-	const handleHoverStart = () => {
-		const start = rotation.get();
-
-		if (!onHover) return;
-
-		let transitionConfig: ReturnType<typeof getTransition> | Transition;
-		let scaleVal = 1;
-
-		switch (onHover) {
-			case "slowDown":
-				transitionConfig = getTransition(spinDuration * 2, start);
-				break;
-			case "speedUp":
-				transitionConfig = getTransition(spinDuration / 4, start);
-				break;
-			case "pause":
-				transitionConfig = {
-					rotate: { type: "spring", damping: 20, stiffness: 300 },
-					scale: { type: "spring", damping: 20, stiffness: 300 },
-				};
-				break;
-			case "goBonkers":
-				transitionConfig = getTransition(spinDuration / 20, start);
-				scaleVal = 0.8;
-				break;
-			default:
-				transitionConfig = getTransition(spinDuration, start);
-		}
-
-		controls.start({
-			rotate: start + 360,
-			scale: scaleVal,
-			transition: transitionConfig,
-		});
-	};
-
-	const handleHoverEnd = () => {
-		const start = rotation.get();
-		controls.start({
-			rotate: start + 360,
-			scale: 1,
-			transition: getTransition(spinDuration, start),
-		});
-	};
 
 	return (
-		<motion.div
-			animate={controls}
+		<div
 			className={cn(
-				"relative m-0 mx-auto h-[200px] w-[200px] origin-center cursor-pointer rounded-full text-center",
+				"relative m-0 mx-auto h-[200px] w-[200px] origin-center rounded-full text-center",
 				className
 			)}
-			initial={{ rotate: 0 }}
-			onMouseEnter={handleHoverStart}
-			onMouseLeave={handleHoverEnd}
-			style={{ rotate: rotation }}
 		>
 			{letters.map((letter, i) => {
 				const rotationDeg = (360 / letters.length) * i;
@@ -126,7 +31,7 @@ const CircularText: React.FC<CircularTextProps> = ({
 
 				return (
 					<span
-						className="absolute inset-0 inline-block text-xl transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+						className="absolute inset-0 inline-block font-medium text-lg"
 						key={`${letter}-${i + 1}`}
 						style={{ transform, WebkitTransform: transform }}
 					>
@@ -134,7 +39,7 @@ const CircularText: React.FC<CircularTextProps> = ({
 					</span>
 				);
 			})}
-		</motion.div>
+		</div>
 	);
 };
 

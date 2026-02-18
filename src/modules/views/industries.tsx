@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "motion/react";
 
 import { Badge } from "@/components/ui/badge";
 
+import { Tape } from "@/assets/corners";
+
 const INDUSTRIES = [
 	{
 		id: "01",
@@ -129,7 +131,12 @@ export function Industries() {
 	return (
 		<section className="container mx-auto max-w-7xl px-0 py-10 sm:py-12 md:py-16">
 			<div className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-10 md:mb-12 md:gap-4">
-				<Badge>We Work For</Badge>
+				<Badge>
+					<div>
+						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
+					</div>
+					We Work For
+				</Badge>
 				<h2 className="font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
 					Industries We Served
 				</h2>
