@@ -5,6 +5,7 @@ import * as React from "react";
 import Image from "next/image";
 
 import { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, type Transition } from "motion/react";
@@ -103,7 +104,14 @@ const useEmblaControls = (
 
 function MotionCarousel(props: PropType) {
 	const { slides, options, hideButtons = false } = props;
-	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const autoplay = React.useRef(
+		Autoplay({
+			delay: 5000,
+			stopOnInteraction: false,
+		})
+	);
+
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
 	const {
 		selectedIndex,
 		scrollSnaps,
