@@ -98,7 +98,7 @@ export function Footer() {
 				<div>
 					<h4 className="border-b pb-3 font-semibold text-2xl">Popular Post</h4>
 					<ul className="mt-4 mb-3 space-y-3">
-						{BLOGS.splice(0, 2).map((blog) => (
+						{BLOGS.slice(0, 2).map((blog) => (
 							<li key={blog.id}>
 								<Link
 									className="flex flex-col gap-2 font-medium hover:text-primary"

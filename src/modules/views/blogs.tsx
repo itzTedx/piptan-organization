@@ -9,6 +9,7 @@ import { IconChevronRight } from "@/assets/icon/chevrons";
 import { BLOGS } from "@/data/resources";
 
 export function Blogs() {
+	console.log(BLOGS);
 	return (
 		<section className="bg-card py-10 sm:py-12 md:py-16 lg:py-28">
 			<div className="container mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 sm:px-6">
