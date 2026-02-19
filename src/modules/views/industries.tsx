@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 
 import { Tape } from "@/assets/corners";
 
+import { cn } from "@/lib/utils";
+
 const INDUSTRIES = [
 	{
 		id: "01",
@@ -129,37 +131,33 @@ export function Industries() {
 		}),
 	};
 	return (
-		<section className="container mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 md:py-16">
-			<div className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-10 md:mb-12 md:gap-4">
-				<Badge>
-					<div>
-						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
-					</div>
-					We Work For
-				</Badge>
-				<h2 className="font-semibold text-3xl leading-tight sm:text-4xl md:text-5xl">
-					Industries We Served
-				</h2>
-			</div>
-
-			<div className="grid grid-cols-1 items-start gap-6 md:grid-cols-12 md:gap-10 lg:gap-16">
+		<section className="container mx-auto px-4 py-10 sm:px-6 sm:py-12 md:py-16">
+			<div className="mx-auto grid max-w-6xl grid-cols-1 items-start md:grid-cols-[1fr_0.75fr]">
 				{/* Left: Tabs */}
-				<div className="order-2 flex flex-col gap-0 md:order-1 md:col-span-5">
+				<div className="order-2 flex flex-col rounded-tl-4xl bg-gray-900 p-6 sm:p-9 md:order-1 md:p-24">
+					<Badge variant="accent">
+						<div>
+							<Tape className="absolute -top-1.5 -left-1.5 size-3! text-muted/20" />
+						</div>
+						We Work For
+					</Badge>
+					<h2 className="mb-6 font-semibold text-3xl text-card leading-tight sm:text-4xl md:text-5xl">
+						Industries We Served
+					</h2>
 					{INDUSTRIES.map((industry, index) => {
 						const isActive = activeIndex === index;
 
 						return (
 							<button
-								className={`group relative flex cursor-pointer items-start gap-4 border-border/50 border-t py-3 text-left transition-all duration-500 first:border-0 md:py-4 ${
-									isActive
-										? "text-foreground"
-										: "text-muted-foreground/60 hover:text-foreground"
-								}`}
+								className={cn(
+									"group relative flex cursor-pointer items-start gap-4 rounded-md border-border/10 border-t p-3 text-left transition-all duration-500 first:border-0 md:py-4",
+									isActive ? "bg-card" : "text-muted/60 hover:text-card"
+								)}
 								key={industry.id}
 								onClick={() => handleTabClick(index)}
 								type="button"
 							>
-								<div className="absolute inset-y-0 left-[-12px] w-[2px] bg-muted md:left-[-20px]">
+								<div className="absolute inset-y-0 right-[-12px] w-0.5 bg-gray-800 md:right-[-40px]">
 									{isActive && (
 										<motion.div
 											animate={isPaused ? { height: "0%" } : { height: "100%" }}
@@ -179,16 +177,16 @@ export function Industries() {
 								</span>
 
 								<div className="flex flex-1 flex-col gap-1">
-									<span
+									<h3
 										className={`font-medium text-base transition-colors duration-500 sm:text-lg md:text-xl ${
 											isActive ? "text-foreground" : ""
 										}`}
 									>
 										{industry.title}
-									</span>
-									<span className="hidden text-muted-foreground text-sm sm:line-clamp-2 md:block">
+									</h3>
+									{/* <span className="hidden text-muted-foreground text-sm sm:line-clamp-2 md:block">
 										{industry.description}
-									</span>
+									</span> */}
 								</div>
 							</button>
 						);
@@ -196,9 +194,9 @@ export function Industries() {
 				</div>
 
 				{/* Right: Active industry details */}
-				<div className="order-1 md:order-2 md:col-span-7">
+				<div className="order-1 self-end md:order-2">
 					<div
-						className="relative overflow-hidden rounded-2xl border border-border/40 bg-secondary/60 p-5 shadow-sm sm:p-6 md:p-8"
+						className="relative overflow-hidden rounded-tr-2xl border border-border/40 bg-card p-4 sm:p-6 md:p-8"
 						onMouseEnter={() => setIsPaused(true)}
 						onMouseLeave={() => setIsPaused(false)}
 					>
