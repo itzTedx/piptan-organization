@@ -6,8 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { CornerTopLeft, Tape } from "@/assets/corners";
 import { IconArrowRightUp } from "@/assets/icon/arrows";
 
+import { Clients } from "@/modules/views/clients";
 import { AboutCarousel } from "@/modules/views/components/about-carousel";
 import { ServicesCarousel } from "@/modules/views/components/services-carousel";
+import { Solutions } from "@/modules/views/solutions";
 
 export default function ServicesPage() {
 	return (
@@ -55,7 +57,7 @@ export default function ServicesPage() {
 					<AboutCarousel />
 				</div>
 			</section>
-			<section className="container mx-auto">
+			<section className="container mx-auto py-12 sm:py-16 md:py-20">
 				<div className="flex flex-col items-center justify-center gap-6 rounded-3xl bg-gray-900 p-9 sm:p-12 md:p-16 lg:p-20 xl:p-24">
 					<Badge variant="accent">
 						<div>
@@ -63,12 +65,14 @@ export default function ServicesPage() {
 						</div>
 						Our Services
 					</Badge>
-					<h2 className="font-medium text-4xl text-card">
+					<h2 className="font-medium text-5xl text-card">
 						Phenomenal Consulting Solutions
 					</h2>
 					<ServicesCarousel />
 				</div>
 			</section>
+			<Solutions />
+			<Clients />
 		</main>
 	);
 }
