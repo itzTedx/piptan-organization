@@ -14,7 +14,6 @@ export const IconArrowRightUp = (props: SVGProps) => {
 					stroke="currentColor"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					strokeWidth="2"
 					x1="4"
 					x2="16"
 					y1="16"
@@ -26,7 +25,6 @@ export const IconArrowRightUp = (props: SVGProps) => {
 					stroke="currentColor"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					strokeWidth="2"
 				/>
 			</g>
 		</svg>

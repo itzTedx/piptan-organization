@@ -73,3 +73,22 @@ export const CornerRight = (props: SVGProps) => {
 		</svg>
 	);
 };
+
+export const CornerTopLeft = (props: SVGProps) => {
+	return (
+		<svg
+			{...props}
+			aria-hidden="true"
+			fill="none"
+			height="311"
+			viewBox="0 0 311 311"
+			width="311"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M309.607 309.607H0.500977C0.770389 139.012 139.012 0.77039 309.607 0.500977V309.607Z"
+				stroke="currentColor"
+			/>
+		</svg>
+	);
+};
