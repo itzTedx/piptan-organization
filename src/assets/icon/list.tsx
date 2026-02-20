@@ -29,3 +29,29 @@ export const IconList = (props: SVGProps) => {
 		</svg>
 	);
 };
+
+export const IconList2 = (props: SVGProps) => {
+	return (
+		<svg
+			{...props}
+			aria-hidden="true"
+			fill="none"
+			height="15"
+			viewBox="0 0 11 15"
+			width="11"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M1.00006 1L10.0001 7.72414L1.00006 14"
+				stroke="currentColor"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="2"
+			/>
+			<path
+				d="M5.00006 7.58621L1.00006 5V10L5.00006 7.58621Z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+};

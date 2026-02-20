@@ -9,6 +9,7 @@ import { IconArrowRightUp } from "@/assets/icon/arrows";
 import { Clients } from "@/modules/views/clients";
 import { AboutCarousel } from "@/modules/views/components/about-carousel";
 import { ServicesCarousel } from "@/modules/views/components/services-carousel";
+import { Plans } from "@/modules/views/plans";
 import { Solutions } from "@/modules/views/solutions";
 
 export default function ServicesPage() {
@@ -73,6 +74,7 @@ export default function ServicesPage() {
 			</section>
 			<Solutions />
 			<Clients />
+			<Plans />
 		</main>
 	);
 }
