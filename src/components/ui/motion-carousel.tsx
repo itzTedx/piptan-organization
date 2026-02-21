@@ -123,7 +123,7 @@ function MotionCarousel(props: PropType) {
 	} = useEmblaControls(emblaApi);
 
 	return (
-		<div className="w-full space-y-4 [--slide-height:18rem] [--slide-size:100%] [--slide-spacing:1rem] sm:[--slide-height:22rem] sm:[--slide-spacing:1.5rem] md:[--slide-height:calc(100svh-8.75rem)]">
+		<div className="w-full space-y-4 [--slide-height:28rem] [--slide-size:100%] [--slide-spacing:1rem] sm:[--slide-height:22rem] sm:[--slide-spacing:1.5rem] md:[--slide-height:calc(100svh-8.75rem)]">
 			<div className="overflow-hidden" ref={emblaRef}>
 				<div className="flex touch-pan-y touch-pinch-zoom">
 					{slides.map((slide, index) => {
@@ -142,12 +142,12 @@ function MotionCarousel(props: PropType) {
 									initial={false}
 									transition={transition}
 								>
-									<div className="container relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-4 py-6 sm:px-6 sm:py-8 md:space-y-4 md:px-8 lg:py-12">
+									<div className="container relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 py-6 sm:py-8 md:space-y-4 md:px-8 lg:py-12">
 										<div className="max-w-xl text-balance text-card">
-											<h1 className="font-bold text-2xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
+											<h1 className="font-bold text-4xl leading-tight md:text-5xl lg:text-6xl xl:text-8xl">
 												{slide.title}
 											</h1>
-											<div className="mt-3 flex flex-col gap-4 sm:mt-4 sm:flex-row sm:gap-6">
+											<div className="mt-3 flex gap-4 sm:mt-4 sm:gap-6">
 												<div className="flex size-12 shrink-0 items-center justify-center rounded-full rounded-br-none bg-accent/50 backdrop-blur-lg sm:size-14">
 													<IconBuilding className="size-6 sm:size-7" />
 												</div>

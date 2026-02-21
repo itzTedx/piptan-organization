@@ -44,7 +44,7 @@ export function Feature() {
 					</div>
 				</div>
 			</div>
-			<div className="mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative -mt-8 aspect-video overflow-hidden rounded-xl sm:-mt-12 sm:rounded-2xl md:-mt-20 lg:-mt-34">
+			<div className="md:mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative aspect-video overflow-hidden rounded-xl sm:-mt-12 sm:rounded-2xl md:-mt-20 lg:-mt-34">
 				<Image
 					alt="Business"
 					className="object-cover"

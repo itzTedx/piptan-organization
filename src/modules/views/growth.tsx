@@ -30,10 +30,10 @@ const GROWTHS = [
 
 export function Growth() {
 	return (
-		<section className="relative py-10 sm:py-12 md:py-16">
+		<section className="relative overflow-hidden py-10 sm:py-12 md:py-16">
 			<div className="container mx-auto max-w-7xl space-y-10 px-4 sm:space-y-12 sm:px-6 md:space-y-16">
 				<div className="grid grid-cols-1 gap-0 rounded-xl bg-gray-800 text-background sm:rounded-2xl md:grid-cols-2 md:rounded-3xl lg:grid-cols-[1.2fr_1fr_1fr] lg:rounded-4xl">
-					<div className="p-5 sm:p-8 md:p-10 lg:p-12">
+					<div className="relative z-10 p-8 max-sm:pb-0 md:p-10 lg:p-12">
 						<Badge className="relative text-accent">
 							<div>
 								<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted/10" />
@@ -50,8 +50,8 @@ export function Growth() {
 						</p>
 						<Button>Annual Report</Button>
 					</div>
-					<div className="relative flex min-h-[200px] items-end justify-end p-4 sm:min-h-[280px] sm:p-6 md:min-h-0 md:p-10">
-						<div className="relative z-10 h-fit w-full max-w-56 space-y-3 rounded-xl rounded-br-none bg-gray-900 p-4 sm:rounded-2xl sm:rounded-br-none sm:p-6">
+					<div className="relative flex p-4 sm:min-h-[280px] sm:p-6 md:min-h-0 md:items-end md:justify-end md:p-10">
+						<div className="relative z-10 h-fit w-full max-w-56 space-y-3 rounded-xl rounded-br-none bg-gray-900 p-6 sm:rounded-2xl sm:rounded-br-none">
 							<h4 className="font-semibold text-lg sm:text-xl md:text-2xl">
 								Monthly Growth
 							</h4>
@@ -65,7 +65,7 @@ export function Growth() {
 						</div>
 						<Image
 							alt="Happy Man"
-							className="absolute bottom-0 left-0 translate-x-0 object-contain object-bottom-left md:translate-x-4 md:object-cover"
+							className="absolute bottom-0 left-0 hidden translate-x-1/2 object-contain object-bottom-left md:block md:translate-x-4 md:object-cover"
 							height={920}
 							src="/images/happy-man.webp"
 							width={780}

@@ -33,7 +33,7 @@ export function WhyChooseUs() {
 							? item.lists.map(({ icon: Icon, ...list }) => (
 									<div
 										className={cn(
-											"group relative z-10 w-full sm:max-w-sm md:max-w-sm lg:mx-auto",
+											"group relative z-10 mx-auto max-w-xs sm:max-w-sm md:max-w-sm lg:mx-auto",
 											item.id === "left"
 												? "md:even:-translate-x-3 md:odd:translate-x-4 lg:even:-translate-x-6 lg:odd:translate-x-9"
 												: "md:even:translate-x-4 md:odd:-translate-x-3 lg:even:translate-x-9 lg:odd:-translate-x-4"
