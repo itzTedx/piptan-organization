@@ -134,7 +134,10 @@ export function Industries() {
 		<section className="container mx-auto px-4 py-10 sm:px-6 sm:py-12 md:py-16">
 			<div className="mx-auto grid max-w-6xl grid-cols-1 items-start md:grid-cols-[1fr_0.75fr]">
 				{/* Left: Tabs */}
-				<div className="order-2 flex flex-col rounded-tl-4xl bg-gray-900 p-6 sm:p-9 md:order-1 md:p-24">
+				<div
+					className="order-2 flex flex-col rounded-tl-4xl bg-gray-900 p-6 sm:p-9 md:order-1 md:p-24"
+					role="tablist"
+				>
 					<Badge variant="accent">
 						<div>
 							<Tape className="absolute -top-1.5 -left-1.5 size-3! text-muted/20" />
@@ -149,12 +152,14 @@ export function Industries() {
 
 						return (
 							<button
+								aria-selected={isActive}
 								className={cn(
 									"group relative flex cursor-pointer items-start gap-4 rounded-md border-border/10 border-t p-3 text-left transition-all duration-500 first:border-0 md:py-4",
 									isActive ? "bg-card" : "text-muted/60 hover:text-card"
 								)}
 								key={industry.id}
 								onClick={() => handleTabClick(index)}
+								role="tab"
 								type="button"
 							>
 								<div className="absolute inset-y-0 right-[-12px] w-0.5 bg-gray-800 md:right-[-40px]">
@@ -194,7 +199,11 @@ export function Industries() {
 				</div>
 
 				{/* Right: Active industry details */}
-				<div className="order-1 self-end md:order-2">
+				<div
+					aria-live="polite"
+					className="order-1 self-end md:order-2"
+					role="tabpanel"
+				>
 					<div
 						className="relative overflow-hidden rounded-tr-2xl border border-border/40 bg-card p-4 sm:p-6 md:p-8"
 						onMouseEnter={() => setIsPaused(true)}
@@ -229,10 +238,10 @@ export function Industries() {
 								</p>
 
 								<ul className="grid gap-2 text-sm sm:grid-cols-2 sm:gap-3 sm:text-base">
-									{INDUSTRIES[activeIndex].list.map((item) => (
+									{INDUSTRIES[activeIndex].list.map((item, listIndex) => (
 										<li
 											className="flex items-start gap-2 text-muted-foreground"
-											key={item.item}
+											key={`${INDUSTRIES[activeIndex].id}-${listIndex}-${item.item}`}
 										>
 											<span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" />
 											<span>{item.item}</span>

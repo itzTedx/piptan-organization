@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import Autoplay from "embla-carousel-autoplay";
 import WheelGesturesPlugin from "embla-carousel-wheel-gestures";
 
@@ -37,7 +39,12 @@ export const ServicesCarousel = () => {
 								<h3 className="mt-4 font-medium text-2xl transition-colors hover:text-primary hover:underline sm:mt-6 md:text-3xl">
 									{service.title}
 								</h3>
-								<Button className="relative hover:text-accent" variant="link">
+								<Button
+									className="relative hover:text-accent"
+									nativeButton={false}
+									render={<Link href="/services" />}
+									variant="link"
+								>
 									Explore More{" "}
 									<div className="absolute left-[90%] h-px w-7 origin-left -translate-x-6 scale-x-0 bg-accent transition-transform duration-300 ease-in group-hover/button:translate-x-0 group-hover/button:scale-x-100" />
 									<IconChevronRight className="text-accent transition-transform duration-300 ease-in group-hover/button:translate-x-6" />

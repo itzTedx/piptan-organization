@@ -12,7 +12,7 @@ export function ServicesAboutSection() {
 		<section className="container grid max-w-7xl grid-cols-1 gap-6 overflow-hidden py-10 sm:py-12 md:grid-cols-2 md:gap-24 md:py-16 lg:py-24">
 			<div className="relative aspect-square min-h-[280px] sm:min-h-0">
 				<Image
-					alt="Service 1"
+					alt="Investment consulting team at work"
 					className="z-20 object-cover"
 					fill
 					src="/images/service-about.webp"

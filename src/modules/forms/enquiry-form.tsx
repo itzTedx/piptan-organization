@@ -56,7 +56,7 @@ export function EnquiryForm() {
 		<Card className="w-full py-6 shadow-md">
 			<CardContent className="px-6">
 				<form
-					id="bug-report-form"
+					id="enquiry-form"
 					onSubmit={(e) => {
 						e.preventDefault();
 						form.handleSubmit();
@@ -101,7 +101,7 @@ export function EnquiryForm() {
 											</FieldLabel>
 											<Input
 												aria-invalid={isInvalid}
-												autoComplete="off"
+												autoComplete="email"
 												id={field.name}
 												name={field.name}
 												onBlur={field.handleBlur}
@@ -205,7 +205,7 @@ export function EnquiryForm() {
 				<Field orientation="horizontal">
 					<Button
 						className="w-full"
-						form="bug-report-form"
+						form="enquiry-form"
 						size="lg"
 						type="submit"
 					>

@@ -110,7 +110,13 @@ export function Footer() {
 							</li>
 						))}
 					</ul>
-					<Button variant="link">View all posts</Button>
+					<Button
+						nativeButton={false}
+						render={<Link href="/blog" />}
+						variant="link"
+					>
+						View all posts
+					</Button>
 				</div>
 			</section>
 			<section className="bg-gray-900 py-4">

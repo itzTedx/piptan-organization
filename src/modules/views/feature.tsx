@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -38,7 +39,12 @@ export function Feature() {
 						<p className="mt-1 text-foreground/60 text-sm sm:mt-2 sm:text-base">
 							The claims of duty obligations business frequently occur.
 						</p>
-						<Button className="p-0 text-sm sm:text-base" variant="link">
+						<Button
+							className="p-0 text-sm sm:text-base"
+							nativeButton={false}
+							render={<Link href="/contact" />}
+							variant="link"
+						>
 							Free Consultation <IconChevronRight />
 						</Button>
 					</div>
@@ -46,12 +52,17 @@ export function Feature() {
 			</div>
 			<div className="md:mask-[url('/masks/mask-1.svg')] mask-no-repeat mask-cover relative aspect-video overflow-hidden rounded-xl sm:-mt-12 sm:rounded-2xl md:-mt-20 lg:-mt-34">
 				<Image
-					alt="Business"
+					alt="Business and investment consulting discussion"
 					className="object-cover"
 					fill
 					src="/images/business.webp"
 				/>
-				<IconYoutube className="absolute right-3 bottom-3 size-8 text-white sm:right-4 sm:bottom-4 sm:size-10" />
+				<span
+					aria-hidden
+					className="absolute right-3 bottom-3 sm:right-4 sm:bottom-4"
+				>
+					<IconYoutube className="size-8 text-white sm:size-10" />
+				</span>
 			</div>
 		</section>
 	);

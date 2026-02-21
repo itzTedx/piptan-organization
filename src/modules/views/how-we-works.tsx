@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 import { Tape } from "@/assets/corners";
 import { IconChevronRight } from "@/assets/icon/chevrons";
@@ -50,7 +51,14 @@ export function HowWeWorks() {
 									{item.id}
 								</p>
 								<p className="inline text-base text-primary sm:text-xl">
-									st step
+									{Number(item.id) === 1
+										? "st"
+										: Number(item.id) === 2
+											? "nd"
+											: Number(item.id) === 3
+												? "rd"
+												: "th"}{" "}
+									step
 								</p>
 							</div>
 						</li>
@@ -59,13 +67,15 @@ export function HowWeWorks() {
 				</ul>
 				<p className="mt-4 flex w-full flex-wrap justify-center gap-2 px-2 text-center font-medium tracking-wide sm:mt-6 sm:gap-3 md:text-lg">
 					Start Investing with Smart Ideas{" "}
-					<Link
+					<Button
 						className="group inline-flex items-center gap-2 transition-colors hover:text-accent"
-						href="/"
+						nativeButton={false}
+						render={<Link href="/contact" />}
+						variant="link"
 					>
 						<IconChevronRight className="size-3 transition-transform duration-300 ease-out group-hover:translate-x-1" />
 						Appointment
-					</Link>
+					</Button>
 				</p>
 			</div>
 		</section>

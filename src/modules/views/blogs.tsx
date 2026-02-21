@@ -1,12 +1,14 @@
 "use client";
 
+import { Route } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Autoplay from "embla-carousel-autoplay";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
 	CarouselContent,
@@ -57,10 +59,15 @@ export function Blogs() {
 											/>
 										</div>
 
-										<CardTitle className="font-medium text-lg sm:text-xl md:text-2xl">
+										<h3 className="font-medium text-lg sm:text-xl md:text-2xl">
 											{blog.title}
-										</CardTitle>
-										<Button className="text-sm sm:text-base" variant="ghost">
+										</h3>
+										<Button
+											className="text-sm sm:text-base"
+											nativeButton={false}
+											render={<Link href={`/blog/${blog.id}` as Route} />}
+											variant="link"
+										>
 											Explore more <IconChevronRight />
 										</Button>
 									</CardContent>

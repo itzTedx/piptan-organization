@@ -144,9 +144,9 @@ function MotionCarousel(props: PropType) {
 								>
 									<div className="container relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 py-6 sm:py-8 md:space-y-4 md:px-8 lg:py-12">
 										<div className="max-w-xl text-balance text-card">
-											<h1 className="font-bold text-4xl leading-tight md:text-5xl lg:text-6xl xl:text-8xl">
+											<h2 className="font-bold text-4xl leading-tight md:text-5xl lg:text-6xl xl:text-8xl">
 												{slide.title}
-											</h1>
+											</h2>
 											<div className="mt-3 flex gap-4 sm:mt-4 sm:gap-6">
 												<div className="flex size-12 shrink-0 items-center justify-center rounded-full rounded-br-none bg-accent/50 backdrop-blur-lg sm:size-14">
 													<IconBuilding className="size-6 sm:size-7" />
@@ -183,8 +183,17 @@ function MotionCarousel(props: PropType) {
 			</div>
 
 			{!hideButtons && (
-				<div className="flex justify-between">
-					<Button disabled={prevDisabled} onClick={onPrev} size="icon">
+				<div
+					aria-label="Carousel controls"
+					className="flex justify-between"
+					role="group"
+				>
+					<Button
+						aria-label="Previous slide"
+						disabled={prevDisabled}
+						onClick={onPrev}
+						size="icon"
+					>
 						<ChevronLeft className="size-5" />
 					</Button>
 
@@ -199,7 +208,12 @@ function MotionCarousel(props: PropType) {
 						))}
 					</div>
 
-					<Button disabled={nextDisabled} onClick={onNext} size="icon">
+					<Button
+						aria-label="Next slide"
+						disabled={nextDisabled}
+						onClick={onNext}
+						size="icon"
+					>
 						<ChevronRight className="size-5" />
 					</Button>
 				</div>
@@ -215,6 +229,7 @@ function DotButton({ selected = false, label, onClick }: DotButtonProps) {
 				width: selected ? 68 : 12,
 				height: selected ? 28 : 12,
 			}}
+			aria-label={label}
 			className="flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary text-primary-foreground text-sm"
 			initial={false}
 			layout

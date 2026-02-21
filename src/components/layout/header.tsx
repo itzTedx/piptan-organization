@@ -15,9 +15,11 @@ interface Props {
 	title: string;
 	breadcrumb: { label: string; href: Route }[];
 	image: string;
+	/** Descriptive alt text for the background image (SEO & accessibility). */
+	imageAlt?: string;
 }
 
-export function Header({ title, breadcrumb, image }: Props) {
+export function Header({ title, breadcrumb, image, imageAlt }: Props) {
 	return (
 		<section className="relative flex min-h-[24svh] items-center justify-center sm:min-h-[20svh]">
 			<div className="container relative z-10 mx-auto mt-24 px-4 sm:mt-32 sm:px-6 md:mt-40 md:px-8">
@@ -44,7 +46,7 @@ export function Header({ title, breadcrumb, image }: Props) {
 			</div>
 			<div className="absolute inset-0 z-1 bg-gray-700/50 mix-blend-multiply" />
 			<Image
-				alt="Services"
+				alt={imageAlt ?? title}
 				className="object-cover saturate-0"
 				fill
 				src={image}

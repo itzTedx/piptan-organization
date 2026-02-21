@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -46,9 +48,8 @@ export function About() {
 					certain circumstances and owing to the claims of duty obligations of
 					business it will frequently occur that.
 				</p>
-				<Button size="lg">
+				<Button nativeButton={false} render={<Link href="/about" />} size="lg">
 					<span className="relative z-10">More about us</span>
-
 					<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
 				</Button>
 			</div>

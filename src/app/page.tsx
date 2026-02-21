@@ -15,8 +15,6 @@ import { WhyChooseUs } from "@/modules/views/why-choose-us";
 
 export default function Page() {
 	const OPTIONS: EmblaOptionsType = { loop: true };
-	// const SLIDE_COUNT = 6;
-	// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 	const SLIDES = [
 		{
@@ -40,7 +38,10 @@ export default function Page() {
 	];
 
 	return (
-		<main className="min-w-0">
+		<main className="min-w-0" id="main-content" role="main">
+			<h1 className="sr-only">
+				Piptan Organization – Investment Advisory & Consulting
+			</h1>
 			<MotionCarousel hideButtons options={OPTIONS} slides={SLIDES} />
 			<About />
 			<Feature />

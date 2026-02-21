@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 
@@ -37,22 +38,48 @@ export function Cta() {
 							<p className="mt-1 font-semibold text-muted">info@piptan.com</p>
 						</li>
 						<li>
-							<ul className="flex items-center gap-6">
+							<span className="sr-only">Follow us on social media</span>
+							<ul className="flex items-center gap-6" role="list">
 								<li>
-									<IconFacebook className="size-5" />
+									<Link
+										aria-label="Facebook"
+										className="text-muted hover:text-card"
+										href="https://facebook.com"
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<IconFacebook className="size-5" />
+									</Link>
 								</li>
 								<li>
-									<IconX className="size-5" />
+									<Link
+										aria-label="X (Twitter)"
+										className="text-muted hover:text-card"
+										href="https://x.com"
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<IconX className="size-5" />
+									</Link>
 								</li>
 								<li>
-									<IconLinkedin className="size-5" />
+									<Link
+										aria-label="LinkedIn"
+										className="text-muted hover:text-card"
+										href="https://linkedin.com"
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<IconLinkedin className="size-5" />
+									</Link>
 								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 				<Image
-					alt="Growth"
+					alt=""
+					aria-hidden
 					className="absolute -right-20 -bottom-12 z-20 translate-x-12"
 					height={1080}
 					src="/images/growth.svg"

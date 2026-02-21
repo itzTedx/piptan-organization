@@ -50,7 +50,7 @@ export function Plans() {
 					<div className="flex size-16 shrink-0 items-center justify-center rounded-full rounded-br-none bg-primary-dark/10 sm:size-20">
 						<div className="relative size-12 overflow-hidden rounded-full border-2 border-card sm:size-16">
 							<Image
-								alt="Shashi"
+								alt="Roman Harry, investment advisor"
 								className="object-cover"
 								fill
 								src="/images/advisor.webp"

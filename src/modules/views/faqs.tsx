@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import {
 	Accordion,
@@ -24,7 +25,10 @@ export function Faqs() {
 					/>
 
 					<Button
-						className="absolute right-3 bottom-3 text-xs sm:right-6 sm:bottom-6 sm:text-sm"
+						className="absolute right-3 bottom-3 sm:right-6 sm:bottom-6"
+						nativeButton={false}
+						render={<Link href="/contact" />}
+						size="xs"
 						variant="secondary"
 					>
 						Read More Q&A
