@@ -23,7 +23,7 @@ export default function ServicesPage() {
 				image="/images/slides/2.webp"
 				title="Services"
 			/>
-			<section className="container mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-2 md:gap-24 md:px-8 md:py-16 lg:py-24">
+			<section className="container grid max-w-7xl grid-cols-1 gap-6 overflow-hidden py-10 sm:py-12 md:grid-cols-2 md:gap-24 md:py-16 lg:py-24">
 				<div className="relative aspect-square min-h-[280px] sm:min-h-0">
 					<Image
 						alt="Service 1"
@@ -31,8 +31,8 @@ export default function ServicesPage() {
 						fill
 						src="/images/service-about.webp"
 					/>
-					<CornerTopLeft className="absolute top-0 -left-4 size-1/2 -translate-x-4 text-primary sm:-left-10 sm:-translate-x-10 md:-left-20 md:-translate-x-20" />
-					<div className="absolute right-2 bottom-4 z-30 translate-x-1/2 rounded-2xl rounded-br-none bg-primary p-3 text-card sm:right-4 sm:bottom-8 sm:rounded-3xl sm:rounded-br-none sm:p-4 md:bottom-12 md:p-6">
+					<CornerTopLeft className="absolute top-0 -left-24 size-1/2 -translate-x-4 text-primary sm:-left-10 sm:-translate-x-10 md:-left-20 md:-translate-x-20" />
+					<div className="absolute right-24 bottom-4 z-30 translate-x-1/2 rounded-2xl rounded-br-none bg-primary p-3 text-card sm:right-4 sm:bottom-8 sm:rounded-3xl sm:rounded-br-none sm:p-4 md:right-2 md:bottom-12 md:p-6">
 						<div className="mb-2 flex items-center justify-between gap-2 sm:mb-4 sm:gap-4">
 							<IconArrowRightUp className="size-6 sm:size-9" />
 							<span className="text-sm sm:text-base">Feb 2026</span>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
 					<AboutCarousel />
 				</div>
 			</section>
-			<section className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 md:px-8 md:py-20">
+			<section className="container mx-auto py-12 sm:py-16 md:py-20">
 				<div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-gray-900 p-6 text-center sm:gap-6 sm:rounded-3xl sm:p-9 sm:text-left md:p-16 lg:p-20 xl:p-24">
 					<Badge variant="accent">
 						<div>

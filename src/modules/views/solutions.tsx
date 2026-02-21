@@ -12,7 +12,7 @@ export function Solutions() {
 					<div>
 						<Tape className="absolute -top-1.5 -left-1.5 size-4! text-muted-foreground/20" />
 					</div>
-					Our Clients
+					Our Solutions
 				</Badge>
 				<h2 className="mt-2 mb-4 font-medium text-3xl sm:text-4xl md:text-5xl">
 					Growing with Smart Ideas

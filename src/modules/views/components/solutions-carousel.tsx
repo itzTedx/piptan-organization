@@ -26,7 +26,7 @@ export const SolutionsCarousel = () => {
 			<CarouselContent className="-ml-3 sm:-ml-6">
 				{SOLUTIONS.map((solution) => (
 					<CarouselItem
-						className="group basis-full pl-3 sm:basis-1/2 sm:pl-6 md:basis-1/4"
+						className="group basis-1/2 pl-3 sm:pl-6 md:basis-1/4"
 						key={solution.id}
 					>
 						<div className="relative z-10 flex h-full flex-col items-center gap-2 rounded-2xl rounded-br-none border-t bg-background p-4 sm:gap-4 sm:rounded-3xl sm:p-6 md:p-10">

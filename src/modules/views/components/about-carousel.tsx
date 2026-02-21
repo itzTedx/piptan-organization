@@ -28,7 +28,7 @@ export const AboutCarousel = () => {
 						<div className="max-w-sm px-4 sm:px-8 md:px-14">
 							<IconBuilding className="size-10 stroke-1 text-primary sm:size-12" />
 							<div className="-mt-6 mb-3 flex w-3/4 justify-end overflow-hidden border-b pr-2 sm:-mt-8 sm:mb-4">
-								<span className="block translate-y-4 font-medium text-3xl text-primary/20 leading-none sm:translate-y-5 sm:text-6xl md:text-7xl">
+								<span className="block translate-y-2.5 font-medium text-3xl text-primary/20 leading-none sm:translate-y-5 sm:text-6xl md:text-7xl">
 									{about.id}
 								</span>
 							</div>
