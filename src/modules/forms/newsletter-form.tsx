@@ -73,8 +73,13 @@ export function NewsletterForm({ className }: { className?: string }) {
 						);
 					}}
 				</form.Field>
-				<Button className="w-full sm:w-auto" type="submit">
-					Subscribe
+				<Button
+					className="relative w-full overflow-hidden sm:w-auto"
+					type="submit"
+				>
+					<span className="relative z-10">Subscribe</span>
+
+					<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
 				</Button>
 			</FieldGroup>
 		</form>

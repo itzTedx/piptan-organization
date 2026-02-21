@@ -159,7 +159,10 @@ function MotionCarousel(props: PropType) {
 														className="w-fit text-sm sm:text-base"
 														size="lg"
 													>
-														Services & Plan
+														<span className="relative z-10">
+															Services & Plan
+														</span>
+														<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
 													</Button>
 												</div>
 											</div>

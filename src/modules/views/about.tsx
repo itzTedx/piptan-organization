@@ -46,7 +46,11 @@ export function About() {
 					certain circumstances and owing to the claims of duty obligations of
 					business it will frequently occur that.
 				</p>
-				<Button size="lg">More about us</Button>
+				<Button size="lg">
+					<span className="relative z-10">More about us</span>
+
+					<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
+				</Button>
 			</div>
 		</section>
 	);

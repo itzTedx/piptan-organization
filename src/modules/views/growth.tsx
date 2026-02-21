@@ -48,7 +48,11 @@ export function Growth() {
 							The wise man therefore always holds in these matters to this
 							principle of selection.
 						</p>
-						<Button>Annual Report</Button>
+						<Button>
+							<span className="relative z-10">Annual Report</span>
+
+							<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
+						</Button>
 					</div>
 					<div className="relative flex p-4 sm:min-h-[280px] sm:p-6 md:min-h-0 md:items-end md:justify-end md:p-10">
 						<div className="relative z-10 h-fit w-full max-w-56 space-y-3 rounded-xl rounded-br-none bg-gray-900 p-6 sm:rounded-2xl sm:rounded-br-none">

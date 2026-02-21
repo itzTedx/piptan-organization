@@ -111,7 +111,11 @@ export function Plans() {
 						</div>
 					</div>
 				</div>
-				<Button className="w-full sm:w-auto">Get Started</Button>
+				<Button className="relative w-full overflow-hidden sm:w-auto" size="lg">
+					<span className="relative z-10">Get Started</span>
+
+					<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300" />
+				</Button>
 			</div>
 		</section>
 	);

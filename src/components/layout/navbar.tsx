@@ -87,7 +87,11 @@ export function Navbar() {
 							orientation="vertical"
 						/>
 						<div className="hidden md:block">
-							<Button size="lg">Start Consultation</Button>
+							<Button size="lg">
+								<span className="relative z-10">Start Consultation</span>
+
+								<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
+							</Button>
 						</div>
 
 						{/* Mobile: sheet trigger */}
@@ -159,7 +163,9 @@ export function Navbar() {
 										onClick={() => setOpen(false)}
 										size="lg"
 									>
-										Start Consultation
+										<span className="relative z-10">Start Consultation</span>
+
+										<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
 									</Button>
 								</div>
 							</SheetContent>

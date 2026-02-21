@@ -209,7 +209,9 @@ export function EnquiryForm() {
 						size="lg"
 						type="submit"
 					>
-						Send Request
+						<span className="relative z-10">Send Request</span>
+
+						<div className="translate-full group-hover/button:translate-0 absolute inset-0 rounded-full bg-accent transition-transform duration-300 ease-out" />
 					</Button>
 				</Field>
 			</CardFooter>
