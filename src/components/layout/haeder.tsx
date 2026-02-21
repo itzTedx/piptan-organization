@@ -19,13 +19,13 @@ interface Props {
 
 export function Header({ title, breadcrumb, image }: Props) {
 	return (
-		<section className="relative flex min-h-[20svh] items-center justify-center">
-			<div className="container relative z-10 mx-auto mt-40">
-				<h1 className="text-center font-bold text-4xl text-card sm:text-5xl md:text-6xl lg:text-7xl">
+		<section className="relative flex min-h-[24svh] items-center justify-center sm:min-h-[20svh]">
+			<div className="container relative z-10 mx-auto mt-24 px-4 sm:mt-32 sm:px-6 md:mt-40 md:px-8">
+				<h1 className="text-center font-bold text-3xl text-card sm:text-5xl md:text-6xl lg:text-7xl">
 					{title}
 				</h1>
-				<Breadcrumb className="mt-40 mb-12">
-					<BreadcrumbList className="text-card text-lg">
+				<Breadcrumb className="mt-8 mb-8 sm:mt-12 sm:mb-10 md:mt-40 md:mb-12">
+					<BreadcrumbList className="flex-wrap justify-center text-card text-sm sm:text-base md:text-lg">
 						{breadcrumb.map((item, index) => (
 							<Fragment key={item.label}>
 								<BreadcrumbItem>

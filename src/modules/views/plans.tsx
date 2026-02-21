@@ -19,7 +19,7 @@ export const PRICING_PLANS_FEATURES = [
 
 export function Plans() {
 	return (
-		<section className="container mx-auto grid max-w-7xl grid-cols-1 gap-6 py-12 sm:py-16 md:grid-cols-3 md:py-20">
+		<section className="container mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-12 sm:px-6 sm:py-16 md:grid-cols-3 md:px-8 md:py-20">
 			<div>
 				<Badge>
 					<div>
@@ -27,28 +27,28 @@ export function Plans() {
 					</div>
 					Plan & Pricing
 				</Badge>
-				<h2 className="mb-6 text-balance font-medium text-5xl">
+				<h2 className="mt-3 mb-4 text-balance font-medium text-3xl sm:mb-6 sm:text-4xl md:text-5xl">
 					Effective & Flexible Pricing
 				</h2>
-				<p className="text-lg text-muted-foreground">
+				<p className="text-base text-muted-foreground sm:text-lg">
 					Welcomed and every pain avoided but in certain circumstances.
 				</p>
-				<ul className="mt-6 space-y-4 text-lg text-muted-foreground">
+				<ul className="mt-4 space-y-3 text-base text-muted-foreground sm:mt-6 sm:space-y-4 sm:text-lg">
 					<li>
-						<IconList2 className="mr-4 inline-block text-primary" /> Investment
-						Strategy
+						<IconList2 className="mr-3 inline-block text-primary sm:mr-4" />{" "}
+						Investment Strategy
 					</li>
 					<li>
-						<IconList2 className="mr-4 inline-block text-primary" /> Investment
-						Manager Selection
+						<IconList2 className="mr-3 inline-block text-primary sm:mr-4" />{" "}
+						Investment Manager Selection
 					</li>
 				</ul>
-				<h3 className="mt-6 font-medium text-2xl">
+				<h3 className="mt-4 font-medium text-xl sm:mt-6 sm:text-2xl">
 					Get help to Choose Right Plan
 				</h3>
-				<div className="mt-3 flex items-center gap-4">
-					<div className="flex size-20 items-center justify-center rounded-full rounded-br-none bg-primary-dark/10">
-						<div className="relative size-16 overflow-hidden rounded-full border-2 border-card">
+				<div className="mt-3 flex items-center gap-3 sm:gap-4">
+					<div className="flex size-16 shrink-0 items-center justify-center rounded-full rounded-br-none bg-primary-dark/10 sm:size-20">
+						<div className="relative size-12 overflow-hidden rounded-full border-2 border-card sm:size-16">
 							<Image
 								alt="Shashi"
 								className="object-cover"
@@ -57,56 +57,61 @@ export function Plans() {
 							/>
 						</div>
 					</div>
-					<div>
-						<h4 className="font-medium text-xl">Roman Harry</h4>
-						<p className="mb-1 text-muted-foreground/80 text-sm">Advisor</p>
+					<div className="min-w-0">
+						<h4 className="font-medium text-lg sm:text-xl">Roman Harry</h4>
+						<p className="mb-1 text-muted-foreground/80 text-xs sm:text-sm">
+							Advisor
+						</p>
 						<Link
-							className="font-medium text-muted-foreground text-xl"
+							className="break-all font-medium text-base text-muted-foreground sm:text-xl"
 							href="tel:+1-(555)-789.0123"
 						>
-							<IconSocialWhatsapp className="mr-2 inline size-5 text-primary" />
+							<IconSocialWhatsapp className="mr-2 inline size-4 text-primary sm:size-5" />
 							+1-(555)-789.0123
 						</Link>
 					</div>
 				</div>
 			</div>
-			<div className="rounded-4xl rounded-br-none bg-card p-9">
+			<div className="rounded-3xl rounded-br-none bg-card p-6 sm:rounded-4xl sm:p-9">
 				<div className="flex items-center justify-between">
-					<h3 className="text-2xl">Basic Package</h3>
+					<h3 className="text-xl sm:text-2xl">Basic Package</h3>
 					<div>
 						<IconLightbulb className="inline-block size-5 text-primary" />
 					</div>
 				</div>
-				<p className="mb-4 text-lg text-muted-foreground">
+				<p className="mb-3 text-base text-muted-foreground sm:mb-4 sm:text-lg">
 					Pricing plan for small business
 				</p>
 				<Separator />
 				<ul>
 					{PRICING_PLANS_FEATURES.map((feature) => (
-						<li className="p-4 text-lg text-muted-foreground" key={feature}>
+						<li
+							className="p-3 text-base text-muted-foreground sm:p-4 sm:text-lg"
+							key={feature}
+						>
 							{feature}
 						</li>
 					))}
 				</ul>
 				<div className="mb-4 flex items-start">
-					<span className="h-full font-medium text-2xl text-primary-dark">
+					<span className="h-full font-medium text-primary-dark text-xl sm:text-2xl">
 						$
 					</span>
 					<div className="flex items-center gap-2">
-						<h4 className="font-medium text-6xl text-primary-dark tracking-wide">
+						<h4 className="font-medium text-5xl text-primary-dark tracking-wide sm:text-6xl">
 							49
 						</h4>
 						<div>
-							<span className="font-medium text-primary-dark text-xl tracking-wide">
+							<span className="font-medium text-lg text-primary-dark tracking-wide sm:text-xl">
 								.99
 							</span>
-							<p className="font-medium text-foreground/60 text-sm uppercase tracking-wide">
+							<p className="font-medium text-foreground/60 text-xs uppercase tracking-wide sm:text-sm">
 								Billed Monthly
 							</p>
 						</div>
 					</div>
 				</div>
-				<Button>Get Started</Button>
+				<Button className="w-full sm:w-auto">Get Started</Button>
 			</div>
 		</section>
 	);
