@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Header } from "@/components/layout/haeder";
+import { Header } from "@/components/layout/header";
 import { Badge } from "@/components/ui/badge";
 
 import { CornerTopLeft, Tape } from "@/assets/corners";

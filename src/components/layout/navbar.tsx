@@ -37,11 +37,11 @@ export function Navbar() {
 	return (
 		<>
 			<header className="relative bg-card">
-				<div className="container mx-auto flex items-center justify-between gap-2 border-b px-4 py-3 sm:gap-4 sm:py-4 md:px-6">
+				<div className="container mx-auto flex items-center justify-between gap-2 border-b px-4 py-3.5 sm:gap-4 sm:py-4 md:px-6">
 					{/* Left: Logo + award block (desktop only) */}
 					<div className="flex min-w-0 flex-1 items-center gap-4 md:gap-6">
 						<Link className="shrink-0" href="/">
-							<Logo className="h-9 w-auto sm:h-10 md:h-[60px] md:w-[200px]" />
+							<Logo className="h-6 w-auto sm:h-10 md:h-[60px] md:w-[200px]" />
 						</Link>
 						<Separator
 							className="hidden h-10 md:block"
