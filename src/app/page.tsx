@@ -40,7 +40,7 @@ export default function Page() {
 	return (
 		<main className="min-w-0" id="main-content" role="main">
 			<h1 className="sr-only">
-				Piptan Organization – Investment Advisory & Consulting
+				Piptan Organization - Investment Advisory & Consulting
 			</h1>
 			<MotionCarousel hideButtons options={OPTIONS} slides={SLIDES} />
 			<About />
