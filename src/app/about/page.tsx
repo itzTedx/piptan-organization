@@ -12,6 +12,8 @@ import { IconList2 } from "@/assets/icon/list";
 import { SITE } from "@/config/site";
 import { AboutWhyChooseUs } from "@/modules/views/about-why-choose-us";
 import { Cta } from "@/modules/views/cta";
+import { Industries } from "@/modules/views/industries";
+import { Skills } from "@/modules/views/skills";
 
 export const metadata: Metadata = {
 	title: "About Us",
@@ -149,7 +151,8 @@ export default function AboutPage() {
 				</div>
 			</section>
 			<AboutWhyChooseUs />
-
+			<Skills />
+			<Industries />
 			{/* Contact / appointment call-to-action */}
 			<Cta />
 		</main>
