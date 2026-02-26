@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import {
 	Carousel,
 	CarouselContent,
+	CarouselDots,
 	CarouselItem,
 } from "@/components/ui/carousel";
 
@@ -92,6 +93,7 @@ export function ReasonsCarousel() {
 					</CarouselItem>
 				))}
 			</CarouselContent>
+			<CarouselDots className="mt-20" />
 		</Carousel>
 	);
 }

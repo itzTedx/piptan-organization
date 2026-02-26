@@ -6,7 +6,7 @@ import { ReasonsCarousel } from "./components/reasons-carousel";
 
 export function AboutWhyChooseUs() {
 	return (
-		<section className="bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-24">
+		<section className="bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32">
 			<div className="container mx-auto flex max-w-7xl flex-col items-center gap-4">
 				<Badge className="text-accent">
 					<div>

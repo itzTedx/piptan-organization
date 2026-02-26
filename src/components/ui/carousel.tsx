@@ -233,6 +233,64 @@ function CarouselNext({
 	);
 }
 
+function CarouselDots({ className, ...props }: React.ComponentProps<"div">) {
+	const { api } = useCarousel();
+	const [selectedIndex, setSelectedIndex] = React.useState(0);
+	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+
+	React.useEffect(() => {
+		if (!api) return;
+
+		setScrollSnaps(api.scrollSnapList());
+		setSelectedIndex(api.selectedScrollSnap());
+
+		const handleSelect = () => {
+			setSelectedIndex(api.selectedScrollSnap());
+		};
+
+		api.on("reInit", handleSelect);
+		api.on("select", handleSelect);
+
+		return () => {
+			api.off("reInit", handleSelect);
+			api.off("select", handleSelect);
+		};
+	}, [api]);
+
+	const scrollTo = React.useCallback(
+		(index: number) => {
+			if (!api) return;
+			api.scrollTo(index);
+		},
+		[api]
+	);
+
+	if (!scrollSnaps.length) return null;
+
+	return (
+		<div
+			className={cn("mt-4 flex items-center justify-center gap-2", className)}
+			{...props}
+		>
+			{scrollSnaps.map((snap, index) => (
+				<React.Fragment key={snap}>
+					<button
+						aria-current={index === selectedIndex}
+						aria-label={`Go to slide ${index + 1}`}
+						className={cn(
+							"size-3.5 cursor-pointer rounded-full rounded-br-none bg-muted/30 transition-all hover:bg-accent-dark",
+							index === selectedIndex && "bg-accent"
+						)}
+						onClick={() => scrollTo(index)}
+						type="button"
+					/>
+					<div className="h-px w-6 bg-muted/20 last:hidden" />
+				</React.Fragment>
+			))}
+		</div>
+	);
+}
+
 export {
 	type CarouselApi,
 	Carousel,
@@ -240,5 +298,6 @@ export {
 	CarouselItem,
 	CarouselPrevious,
 	CarouselNext,
+	CarouselDots,
 	useCarousel,
 };
