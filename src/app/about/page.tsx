@@ -28,27 +28,6 @@ export const metadata: Metadata = {
 	alternates: { canonical: `${SITE.url}/about` },
 };
 
-const TEAM = [
-	{
-		id: 1,
-		name: "Amira Khalid",
-		role: "Managing Partner",
-		initials: "AK",
-	},
-	{
-		id: 2,
-		name: "Daniel Ortiz",
-		role: "Head of Investment Strategy",
-		initials: "DO",
-	},
-	{
-		id: 3,
-		name: "Noura Al Mansoori",
-		role: "Client Relationship Director",
-		initials: "NM",
-	},
-];
-
 export default function AboutPage() {
 	const breadcrumb: { label: string; href: Route }[] = [
 		{ label: "Home", href: "/" },
